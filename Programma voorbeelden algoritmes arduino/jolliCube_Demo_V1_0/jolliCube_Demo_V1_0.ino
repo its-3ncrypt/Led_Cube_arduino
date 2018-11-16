@@ -2540,7 +2540,7 @@ char font_data[128][8] = {
  
 // Define display string here
 const int charNum = 17;
-char string[charNum] = {'H','O','M','E',' ',' ','S','W','E','E','T',' ',' ','H','O','M','E'};
+char string[charNum] = {'Z','U','I','G',' ',' ','M','I','J','N',' ','P','I','E','M','E','L'};
  
 //***********************************************************************************************************************
 void effect_text(int delayt, int First, int Last){
@@ -3504,5 +3504,3 @@ ISR(TIMER1_COMPA_vect)
 {
   display();
 }
-
-

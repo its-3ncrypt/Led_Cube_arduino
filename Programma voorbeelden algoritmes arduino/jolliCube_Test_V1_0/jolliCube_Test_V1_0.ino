@@ -33,8 +33,7 @@ void setup()
     maxTransferAll(y, 0x00); 
   }
 
-  Serial.begin (115200);
-  Serial.println("jolliFactory 8x8x8 jolliCube Test example 1.0");              
+  Serial.begin (115200);       
 }
 
 
