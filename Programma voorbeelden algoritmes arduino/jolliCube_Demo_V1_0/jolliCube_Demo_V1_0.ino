@@ -2540,7 +2540,7 @@ char font_data[128][8] = {
  
 // Define display string here
 const int charNum = 17;
-char string[charNum] = {'Z','U','I','G',' ',' ','M','I','J','N',' ','P','I','E','M','E','L'};
+char string[charNum] = {'P','R','O',' ','S','E','B','A','S','I','A','A','N','!','!','!','!'};
  
 //***********************************************************************************************************************
 void effect_text(int delayt, int First, int Last){
