@@ -1,0 +1,10 @@
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\bin\Debug\Aansturingsprogramma.exe.config
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\bin\Debug\Aansturingsprogramma.exe
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\bin\Debug\Aansturingsprogramma.pdb
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.csprojAssemblyReference.cache
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.Form1.resources
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.Properties.Resources.resources
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.csproj.GenerateResource.cache
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.csproj.CoreCompileInputs.cache
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.exe
+D:\Led_Cube_arduino\Visual Studio Programs\Aansturingsprogramma\Aansturingsprogramma\obj\Debug\Aansturingsprogramma.pdb
