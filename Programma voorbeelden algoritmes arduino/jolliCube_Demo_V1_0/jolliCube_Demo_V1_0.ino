@@ -12,6 +12,8 @@ You may check out our instructables for more detail at http://www.instructables.
 #define AXIS_Z 3
 #define REFRESH_RATE 120
 
+#define SS 10 //fix voor genuino zero
+
 int CUBE_SIZE = 8;
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX72xx
 byte value[8];
@@ -37,7 +39,7 @@ void setup()
   maxTransferAll(0x0C, 0x01);   // 01 = on 00 = Power saving mode or shutdown
   maxTransferAll(0x0A, 0x0F);   // Set Brightness Intensity
 
-  setUpInterrupts();
+  //setUpInterrupts();
 }
 
 
@@ -3480,7 +3482,7 @@ void maxTransferLEDCube(uint8_t address)
 }
 
 
-
+/*
 //***********************************************************************************************************************
 void setUpInterrupts()
 {
@@ -3503,4 +3505,4 @@ void setUpInterrupts()
 ISR(TIMER1_COMPA_vect)
 {
   display();
-}
+}*/

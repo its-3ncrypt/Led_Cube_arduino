@@ -7,7 +7,8 @@ SPI connections between Arduino Nano/UNO and the jolliCube are MOSI (Pin 11), SC
 */
 
 
-#include <SPI.h>          
+#include <SPI.h> 
+#define SS 10         
        
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX7219
 int maxInUse = 8; // No. of MAX72xx ICs
@@ -33,7 +34,7 @@ void setup()
     maxTransferAll(y, 0x00); 
   }
 
-  Serial.begin (115200);       
+  Serial.begin (74880);       
 }
 
 
@@ -53,6 +54,7 @@ void loop()
   }
 
     delay(500);
+    
 }
 
 
