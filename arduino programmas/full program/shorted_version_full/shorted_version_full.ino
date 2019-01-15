@@ -7,6 +7,7 @@
 #define AXIS_Y 2
 #define AXIS_Z 3
 #define REFRESH_RATE 120
+#define SS 10
 
 int CUBE_SIZE = 8;
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX72xx
@@ -35,7 +36,6 @@ void setup()
   maxTransferAll(0x0C, 0x01);   // 01 = on 00 = Power saving mode or shutdown
   maxTransferAll(0x0A, 0x0F);   // Set Brightness Intensity
 
-  setUpInterrupts();
 }
 
 void loop() {
@@ -1087,30 +1087,4 @@ void maxTransferLEDCube(uint8_t address)
   }
 
   digitalWrite(SPI_CS, HIGH);
-}
-
-
-
-//***********************************************************************************************************************
-void setUpInterrupts()
-{
-  cli();//stop interrupts while we set them up
-  //set up an interrupt with timer1
-  TCCR1A = 0;
-  TCCR1B = 0;
-  TCNT1  = 0;
-  OCR1A = (16000000/REFRESH_RATE/1024/CUBE_SIZE -1);
-  TCCR1B |= (1 << WGM12);
-  // Set to CS10 and CS12 so we have the 1024
-  TCCR1B |= (1 << CS12) | (1 << CS10);  
-  TIMSK1 |= (1 << OCIE1A);
-  sei();//re-allow interrupts 
-}
-
-
-
-//***********************************************************************************************************************
-ISR(TIMER1_COMPA_vect)
-{
-  display();
 }

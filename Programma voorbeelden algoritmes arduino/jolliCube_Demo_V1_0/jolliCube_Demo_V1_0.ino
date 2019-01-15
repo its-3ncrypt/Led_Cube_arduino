@@ -26,8 +26,7 @@ volatile int current_layer = 0;
 //***********************************************************************************************************************
 void setup()
 {
-  Serial.begin (115200);
-  Serial.println("jolliFactory 8x8x8 jolliCube Demo example 1.0");              
+  Serial.begin (115200);              
 
   pinMode(SPI_CS, OUTPUT);
 
@@ -120,7 +119,8 @@ void loop()
     effect_boxside_randsend_parallel (AXIS_Z, 0, 150, 1);
     delay(100);
     effect_boxside_randsend_parallel (AXIS_Z, 1, 150, 1);
-    delay(100);    
+    delay(100);
+    display();    
   }
 }
 
@@ -3482,27 +3482,8 @@ void maxTransferLEDCube(uint8_t address)
 }
 
 
-/*
 //***********************************************************************************************************************
-void setUpInterrupts()
-{
-  cli();//stop interrupts while we set them up
-  //set up an interrupt with timer1
-  TCCR1A = 0;
-  TCCR1B = 0;
-  TCNT1  = 0;
-  OCR1A = (16000000/REFRESH_RATE/1024/CUBE_SIZE -1);
-  TCCR1B |= (1 << WGM12);
-  // Set to CS10 and CS12 so we have the 1024
-  TCCR1B |= (1 << CS12) | (1 << CS10);  
-  TIMSK1 |= (1 << OCIE1A);
-  sei();//re-allow interrupts 
-}
-
-
-
-//***********************************************************************************************************************
-ISR(TIMER1_COMPA_vect)
+/*ISR(TIMER1_COMPA_vect)
 {
   display();
 }*/
