@@ -31,8 +31,23 @@ namespace Aansturingsprogramma
         {
 
         }
-        //Geavanceerd
-        private void geavanceerdToolStripMenuItem_Click(object sender, EventArgs e)
+        //Effecten
+        private void Effecten_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Generator
+        private void Generator_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Simpele naam Effecten
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Selectie Effecten
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
