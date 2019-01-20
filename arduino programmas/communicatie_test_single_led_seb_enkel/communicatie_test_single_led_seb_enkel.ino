@@ -13,7 +13,6 @@ void setup() {
 void loop() {
 if(Serial.available() > 0){
  led_response = Serial.read();
-       digitalWrite(ledPin, HIGH);
         if(led_response == '0'){
         digitalWrite(ledPin, LOW);
         dela = 1000;

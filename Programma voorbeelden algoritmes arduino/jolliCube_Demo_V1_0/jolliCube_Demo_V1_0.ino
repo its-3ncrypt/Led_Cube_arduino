@@ -12,6 +12,8 @@ You may check out our instructables for more detail at http://www.instructables.
 #define AXIS_Z 3
 #define REFRESH_RATE 120
 
+#define SS 10 //fix voor genuino zero
+
 int CUBE_SIZE = 8;
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX72xx
 byte value[8];
@@ -24,8 +26,7 @@ volatile int current_layer = 0;
 //***********************************************************************************************************************
 void setup()
 {
-  Serial.begin (115200);
-  Serial.println("jolliFactory 8x8x8 jolliCube Demo example 1.0");              
+  Serial.begin (115200);              
 
   pinMode(SPI_CS, OUTPUT);
 
@@ -37,7 +38,7 @@ void setup()
   maxTransferAll(0x0C, 0x01);   // 01 = on 00 = Power saving mode or shutdown
   maxTransferAll(0x0A, 0x0F);   // Set Brightness Intensity
 
-  setUpInterrupts();
+  //setUpInterrupts();
 }
 
 
@@ -118,7 +119,8 @@ void loop()
     effect_boxside_randsend_parallel (AXIS_Z, 0, 150, 1);
     delay(100);
     effect_boxside_randsend_parallel (AXIS_Z, 1, 150, 1);
-    delay(100);    
+    delay(100);
+    display();    
   }
 }
 
@@ -2540,7 +2542,7 @@ char font_data[128][8] = {
  
 // Define display string here
 const int charNum = 17;
-char string[charNum] = {'H','O','M','E',' ',' ','S','W','E','E','T',' ',' ','H','O','M','E'};
+char string[charNum] = {'P','R','O',' ','S','E','B','A','S','I','A','A','N','!','!','!','!'};
  
 //***********************************************************************************************************************
 void effect_text(int delayt, int First, int Last){
@@ -3480,29 +3482,8 @@ void maxTransferLEDCube(uint8_t address)
 }
 
 
-
 //***********************************************************************************************************************
-void setUpInterrupts()
-{
-  cli();//stop interrupts while we set them up
-  //set up an interrupt with timer1
-  TCCR1A = 0;
-  TCCR1B = 0;
-  TCNT1  = 0;
-  OCR1A = (16000000/REFRESH_RATE/1024/CUBE_SIZE -1);
-  TCCR1B |= (1 << WGM12);
-  // Set to CS10 and CS12 so we have the 1024
-  TCCR1B |= (1 << CS12) | (1 << CS10);  
-  TIMSK1 |= (1 << OCIE1A);
-  sei();//re-allow interrupts 
-}
-
-
-
-//***********************************************************************************************************************
-ISR(TIMER1_COMPA_vect)
+/*ISR(TIMER1_COMPA_vect)
 {
   display();
-}
-
-
+}*/
