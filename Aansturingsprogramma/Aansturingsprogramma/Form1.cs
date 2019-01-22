@@ -448,5 +448,10 @@ namespace Aansturingsprogramma
         {
 
         }
+        //led selector slide
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
