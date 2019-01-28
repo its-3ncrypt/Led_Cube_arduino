@@ -7,30 +7,139 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
+
 
 namespace Aansturingsprogramma
 {
+
     public partial class Form1 : Form
     {
+        //main codes
+        bool isConnected = false;
+        String[] ports;
+        SerialPort port;
+
         public Form1()
         {
             InitializeComponent();
+            disableControls();
+            getAvailableComPorts();
+        }
+
+        //alle poorten opzoeken
+        void getAvailableComPorts()
+        {
+            ports = SerialPort.GetPortNames();
+        }
+
+        //lock zetten op alle knoppen voor het verbinden
+        private void disableControls()
+        {
+            //alle boxes disabelen
+            checkBox1.Enabled = false;
+            checkBox2.Enabled = false;
+            checkBox3.Enabled = false;
+            checkBox4.Enabled = false;
+            checkBox5.Enabled = false;
+            checkBox6.Enabled = false;
+            checkBox9.Enabled = false;
+            checkBox10.Enabled = false;
+            checkBox13.Enabled = false;
+            checkBox14.Enabled = false;
+            checkBox15.Enabled = false;
+            checkBox16.Enabled = false;
+            checkBox17.Enabled = false;
+            checkBox18.Enabled = false;
+            checkBox19.Enabled = false;
+            checkBox20.Enabled = false;
+            checkBox21.Enabled = false;
+            checkBox22.Enabled = false;
+            checkBox23.Enabled = false;
+            checkBox24.Enabled = false;
+            checkBox25.Enabled = false;
+            checkBox26.Enabled = false;
+            checkBox27.Enabled = false;
+            checkBox28.Enabled = false;
+            checkBox29.Enabled = false;
+            checkBox30.Enabled = false;
+            checkBox31.Enabled = false;
+            checkBox32.Enabled = false;
+            checkBox33.Enabled = false;
+            checkBox34.Enabled = false;
+            checkBox35.Enabled = false;
+            checkBox36.Enabled = false;
+            checkBox37.Enabled = false;
+            checkBox38.Enabled = false;
+            checkBox39.Enabled = false;
+            checkBox40.Enabled = false;
+            checkBox43.Enabled = false;
+            checkBox44.Enabled = false;
+            checkBox45.Enabled = false;
+            checkBox46.Enabled = false;
+            checkBox47.Enabled = false;
+            checkBox48.Enabled = false;
+            checkBox49.Enabled = false;
+            checkBox50.Enabled = false;
+            checkBox73.Enabled = false;
+            checkBox74.Enabled = false;
+            checkBox75.Enabled = false;
+            checkBox76.Enabled = false;
+            checkBox77.Enabled = false;
+            checkBox78.Enabled = false;
+            checkBox79.Enabled = false;
+            checkBox80.Enabled = false;
+            checkBox83.Enabled = false;
+            checkBox84.Enabled = false;
+            checkBox85.Enabled = false;
+            checkBox86.Enabled = false;
+            checkBox87.Enabled = false;
+            checkBox88.Enabled = false;
+            checkBox89.Enabled = false;
+            checkBox90.Enabled = false;
+            checkBox93.Enabled = false;
+            checkBox94.Enabled = false;
+            checkBox95.Enabled = false;
+            checkBox96.Enabled = false;
+            checkBox97.Enabled = false;
+            checkBox98.Enabled = false;
+            checkBox99.Enabled = false;
+            numericUpDown1.Enabled = false;
+            numericUpDown2.Enabled = false;
+            numericUpDown3.Enabled = false;
+            numericUpDown4.Enabled = false;
+            button1.Enabled = false;
+            button2.Enabled = false;
+        }
+
+        //unlock zetten op alle knoppen voor het verbinden
+        private void enableControls()
+        {
+            //nog alle boxes in te vullen
+        }
+
+        private void connectToArduino()
+        {
+            isConnected = true;
+            string selectedPort = comboBox1.GetItemText(comboBox1.SelectedItem);
+            port = new SerialPort(selectedPort, 9600, Parity.None, 8, StopBits.One);
+            port.Open();
+            //AAN TE PASSEN!
+            //port.Write("#STAR\n");
+            //button1.Text = "Disconnect";
+            enableControls();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-        //Menu
-        private void effectenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        /////////////////////////////////////////////////////////////////////////////////
+        //eerst verbinding maken
+        //dan code uploaden
+        /////////////////////////////////////////////////////////////////////////////////
+ 
 
-        }
-        //verbinding
-        private void generatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         //Effecten
         private void Effecten_Click(object sender, EventArgs e)
         {
@@ -450,6 +559,11 @@ namespace Aansturingsprogramma
         }
         //led selector slide
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

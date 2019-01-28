@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Menu = new System.Windows.Forms.MenuStrip();
-            this.effectenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs = new System.Windows.Forms.TabControl();
             this.Effecten = new System.Windows.Forms.TabPage();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -54,6 +51,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SlideSelector = new System.Windows.Forms.NumericUpDown();
             this.checkBox73 = new System.Windows.Forms.CheckBox();
             this.checkBox74 = new System.Windows.Forms.CheckBox();
             this.checkBox75 = new System.Windows.Forms.CheckBox();
@@ -118,9 +117,12 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.SlideSelector = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Menu.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabs.SuspendLayout();
             this.Effecten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -130,45 +132,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SlideSelector)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Menu
-            // 
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.effectenToolStripMenuItem,
-            this.generatorToolStripMenuItem});
-            this.Menu.Location = new System.Drawing.Point(0, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(437, 24);
-            this.Menu.TabIndex = 0;
-            this.Menu.Text = "menuStrip1";
-            // 
-            // effectenToolStripMenuItem
-            // 
-            this.effectenToolStripMenuItem.Name = "effectenToolStripMenuItem";
-            this.effectenToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.effectenToolStripMenuItem.Text = "Menu";
-            this.effectenToolStripMenuItem.Click += new System.EventHandler(this.effectenToolStripMenuItem_Click);
-            // 
-            // generatorToolStripMenuItem
-            // 
-            this.generatorToolStripMenuItem.Name = "generatorToolStripMenuItem";
-            this.generatorToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.generatorToolStripMenuItem.Text = "Verbind";
-            this.generatorToolStripMenuItem.Click += new System.EventHandler(this.generatorToolStripMenuItem_Click);
             // 
             // tabs
             // 
             this.tabs.Controls.Add(this.Effecten);
             this.tabs.Controls.Add(this.Generator);
-            this.tabs.Location = new System.Drawing.Point(13, 28);
+            this.tabs.Location = new System.Drawing.Point(13, 6);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(409, 410);
+            this.tabs.Size = new System.Drawing.Size(409, 395);
             this.tabs.TabIndex = 1;
             // 
             // Effecten
             // 
+            this.Effecten.Controls.Add(this.groupBox2);
             this.Effecten.Controls.Add(this.checkBox7);
             this.Effecten.Controls.Add(this.checkBox8);
             this.Effecten.Controls.Add(this.checkBox11);
@@ -188,7 +168,7 @@
             this.Effecten.Location = new System.Drawing.Point(4, 22);
             this.Effecten.Name = "Effecten";
             this.Effecten.Padding = new System.Windows.Forms.Padding(3);
-            this.Effecten.Size = new System.Drawing.Size(401, 384);
+            this.Effecten.Size = new System.Drawing.Size(401, 369);
             this.Effecten.TabIndex = 0;
             this.Effecten.Text = "Effecten";
             this.Effecten.UseVisualStyleBackColor = true;
@@ -372,6 +352,7 @@
             // 
             // Generator
             // 
+            this.Generator.Controls.Add(this.groupBox1);
             this.Generator.Controls.Add(this.button2);
             this.Generator.Controls.Add(this.label5);
             this.Generator.Controls.Add(this.numericUpDown4);
@@ -379,7 +360,7 @@
             this.Generator.Location = new System.Drawing.Point(4, 22);
             this.Generator.Name = "Generator";
             this.Generator.Padding = new System.Windows.Forms.Padding(3);
-            this.Generator.Size = new System.Drawing.Size(401, 384);
+            this.Generator.Size = new System.Drawing.Size(401, 369);
             this.Generator.TabIndex = 1;
             this.Generator.Text = "Effecten Generator";
             this.Generator.UseVisualStyleBackColor = true;
@@ -387,7 +368,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(10, 355);
+            this.button2.Location = new System.Drawing.Point(6, 327);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -398,7 +379,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 272);
+            this.label5.Location = new System.Drawing.Point(7, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 2;
@@ -406,7 +387,7 @@
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(45, 270);
+            this.numericUpDown4.Location = new System.Drawing.Point(45, 218);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             20,
             0,
@@ -489,6 +470,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 197);
             this.panel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(282, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Slide";
+            // 
+            // SlideSelector
+            // 
+            this.SlideSelector.Location = new System.Drawing.Point(282, 93);
+            this.SlideSelector.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.SlideSelector.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SlideSelector.Name = "SlideSelector";
+            this.SlideSelector.Size = new System.Drawing.Size(35, 20);
+            this.SlideSelector.TabIndex = 78;
+            this.SlideSelector.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SlideSelector.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // checkBox73
             // 
@@ -1194,51 +1207,80 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // SlideSelector
+            // groupBox2
             // 
-            this.SlideSelector.Location = new System.Drawing.Point(282, 93);
-            this.SlideSelector.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.SlideSelector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SlideSelector.Name = "SlideSelector";
-            this.SlideSelector.Size = new System.Drawing.Size(35, 20);
-            this.SlideSelector.TabIndex = 78;
-            this.SlideSelector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SlideSelector.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(6, 251);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(352, 58);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Serial Connection";
             // 
-            // label6
+            // comboBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(282, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "Slide";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(112, 30);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(71, 21);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 25);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 28);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Connect";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Location = new System.Drawing.Point(10, 264);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(352, 58);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Serial Connection";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(112, 30);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(71, 21);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 25);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 28);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Connect";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 448);
+            this.ClientSize = new System.Drawing.Size(437, 407);
             this.Controls.Add(this.tabs);
-            this.Controls.Add(this.Menu);
-            this.MainMenuStrip = this.Menu;
             this.Name = "Form1";
             this.Text = "Led Cube Controller";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
             this.tabs.ResumeLayout(false);
             this.Effecten.ResumeLayout(false);
             this.Effecten.PerformLayout();
@@ -1251,16 +1293,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SlideSelector)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem effectenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generatorToolStripMenuItem;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.TabPage Effecten;
         private System.Windows.Forms.TabPage Generator;
@@ -1350,6 +1389,12 @@
         private System.Windows.Forms.CheckBox checkBox32;
         private System.Windows.Forms.NumericUpDown SlideSelector;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button4;
     }
 }
 
