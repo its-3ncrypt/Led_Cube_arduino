@@ -19,6 +19,14 @@ namespace Aansturingsprogramma
         bool isConnected = false;
         String[] ports;
         SerialPort port;
+        bool Ledraster1 = true;
+        bool Ledraster2 = false;
+        bool Ledraster3 = false;
+        bool Ledraster4 = false;
+        bool Ledraster5 = false;
+        bool Ledraster6 = false;
+        bool Ledraster7 = false;
+        bool Ledraster8 = false;
 
         public Form1()
         {
@@ -42,9 +50,12 @@ namespace Aansturingsprogramma
             checkBox3.Enabled = false;
             checkBox4.Enabled = false;
             checkBox5.Enabled = false;
+            checkBox7.Enabled = false;
             checkBox6.Enabled = false;
+            checkBox8.Enabled = false;
             checkBox9.Enabled = false;
             checkBox10.Enabled = false;
+            checkBox11.Enabled = false;
             checkBox13.Enabled = false;
             checkBox14.Enabled = false;
             checkBox15.Enabled = false;
@@ -104,18 +115,100 @@ namespace Aansturingsprogramma
             checkBox97.Enabled = false;
             checkBox98.Enabled = false;
             checkBox99.Enabled = false;
+            checkBox12.Enabled = false;
+            checkBox8.Enabled = false;
             numericUpDown1.Enabled = false;
             numericUpDown2.Enabled = false;
             numericUpDown3.Enabled = false;
             numericUpDown4.Enabled = false;
+            numericUpDown5.Enabled = false;
             button1.Enabled = false;
             button2.Enabled = false;
+            checkBox100.Enabled = false;
         }
 
         //unlock zetten op alle knoppen voor het verbinden
         private void enableControls()
         {
-            //nog alle boxes in te vullen
+            checkBox1.Enabled = true;
+            checkBox2.Enabled = true;
+            checkBox3.Enabled = true;
+            checkBox4.Enabled = true;
+            checkBox5.Enabled = true;
+            checkBox6.Enabled = true;
+            checkBox8.Enabled = true;
+            checkBox9.Enabled = true;
+            checkBox10.Enabled = true;
+            checkBox12.Enabled = true;
+            checkBox11.Enabled = true;
+            checkBox13.Enabled = true;
+            checkBox14.Enabled = true;
+            checkBox15.Enabled = true;
+            checkBox16.Enabled = true;
+            checkBox17.Enabled = true;
+            checkBox18.Enabled = true;
+            checkBox19.Enabled = true;
+            checkBox20.Enabled = true;
+            checkBox21.Enabled = true;
+            checkBox22.Enabled = true;
+            checkBox23.Enabled = true;
+            checkBox24.Enabled = true;
+            checkBox25.Enabled = true;
+            checkBox26.Enabled = true;
+            checkBox27.Enabled = true;
+            checkBox28.Enabled = true;
+            checkBox29.Enabled = true;
+            checkBox30.Enabled = true;
+            checkBox31.Enabled = true;
+            checkBox32.Enabled = true;
+            checkBox33.Enabled = true;
+            checkBox34.Enabled = true;
+            checkBox35.Enabled = true;
+            checkBox36.Enabled = true;
+            checkBox37.Enabled = true;
+            checkBox38.Enabled = true;
+            checkBox39.Enabled = true;
+            checkBox40.Enabled = true;
+            checkBox43.Enabled = true;
+            checkBox44.Enabled = true;
+            checkBox45.Enabled = true;
+            checkBox46.Enabled = true;
+            checkBox47.Enabled = true;
+            checkBox48.Enabled = true;
+            checkBox49.Enabled = true;
+            checkBox50.Enabled = true;
+            checkBox73.Enabled = true;
+            checkBox74.Enabled = true;
+            checkBox75.Enabled = true;
+            checkBox76.Enabled = true;
+            checkBox77.Enabled = true;
+            checkBox78.Enabled = true;
+            checkBox79.Enabled = true;
+            checkBox80.Enabled = true;
+            checkBox83.Enabled = true;
+            checkBox84.Enabled = true;
+            checkBox85.Enabled = true;
+            checkBox86.Enabled = true;
+            checkBox87.Enabled = true;
+            checkBox88.Enabled = true;
+            checkBox89.Enabled = true;
+            checkBox90.Enabled = true;
+            checkBox93.Enabled = true;
+            checkBox94.Enabled = true;
+            checkBox95.Enabled = true;
+            checkBox96.Enabled = true;
+            checkBox97.Enabled = true;
+            checkBox98.Enabled = true;
+            checkBox99.Enabled = true;
+            numericUpDown1.Enabled = true;
+            numericUpDown2.Enabled = true;
+            numericUpDown3.Enabled = true;
+            numericUpDown4.Enabled = true;
+            numericUpDown5.Enabled = true;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            checkBox7.Enabled = true;
+            checkBox100.Enabled = true;
         }
 
         private void connectToArduino()
@@ -557,13 +650,23 @@ namespace Aansturingsprogramma
         {
 
         }
-        //led selector slide
+        
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
+        //de connectie protocol keuze
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        //led selector slide
+        private void numericUpDown5_ValueChanged_1(object sender, EventArgs e)
+        {
+           // int x = ConvertToInt(numericUpDown5.Value);
+        }
+        //de connectie protocol keuze
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

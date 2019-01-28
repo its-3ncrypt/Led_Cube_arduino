@@ -30,6 +30,9 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.Effecten = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -52,7 +55,6 @@
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.SlideSelector = new System.Windows.Forms.NumericUpDown();
             this.checkBox73 = new System.Windows.Forms.CheckBox();
             this.checkBox74 = new System.Windows.Forms.CheckBox();
             this.checkBox75 = new System.Windows.Forms.CheckBox();
@@ -117,23 +119,17 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.tabs.SuspendLayout();
             this.Effecten.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.Generator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SlideSelector)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -173,6 +169,39 @@
             this.Effecten.Text = "Effecten";
             this.Effecten.UseVisualStyleBackColor = true;
             this.Effecten.Click += new System.EventHandler(this.Effecten_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(6, 251);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(352, 58);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Serial Connection";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(112, 30);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(71, 21);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 25);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 28);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Connect";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // checkBox7
             // 
@@ -352,7 +381,6 @@
             // 
             // Generator
             // 
-            this.Generator.Controls.Add(this.groupBox1);
             this.Generator.Controls.Add(this.button2);
             this.Generator.Controls.Add(this.label5);
             this.Generator.Controls.Add(this.numericUpDown4);
@@ -368,7 +396,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 327);
+            this.button2.Location = new System.Drawing.Point(150, 286);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -400,8 +428,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.numericUpDown5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.SlideSelector);
             this.panel1.Controls.Add(this.checkBox73);
             this.panel1.Controls.Add(this.checkBox74);
             this.panel1.Controls.Add(this.checkBox75);
@@ -479,29 +507,6 @@
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 79;
             this.label6.Text = "Slide";
-            // 
-            // SlideSelector
-            // 
-            this.SlideSelector.Location = new System.Drawing.Point(282, 93);
-            this.SlideSelector.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.SlideSelector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SlideSelector.Name = "SlideSelector";
-            this.SlideSelector.Size = new System.Drawing.Size(35, 20);
-            this.SlideSelector.TabIndex = 78;
-            this.SlideSelector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SlideSelector.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // checkBox73
             // 
@@ -1207,70 +1212,28 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // groupBox2
+            // numericUpDown5
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 251);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(352, 58);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Serial Connection";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 30);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(71, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 25);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 28);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Connect";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(10, 264);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(352, 58);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Serial Connection";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 30);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(71, 21);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 25);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 28);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Connect";
-            this.button4.UseVisualStyleBackColor = true;
+            this.numericUpDown5.Location = new System.Drawing.Point(285, 96);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown5.TabIndex = 80;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged_1);
             // 
             // Form1
             // 
@@ -1284,6 +1247,7 @@
             this.tabs.ResumeLayout(false);
             this.Effecten.ResumeLayout(false);
             this.Effecten.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -1292,9 +1256,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SlideSelector)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1387,14 +1349,11 @@
         private System.Windows.Forms.CheckBox checkBox22;
         private System.Windows.Forms.CheckBox checkBox31;
         private System.Windows.Forms.CheckBox checkBox32;
-        private System.Windows.Forms.NumericUpDown SlideSelector;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
     }
 }
 
