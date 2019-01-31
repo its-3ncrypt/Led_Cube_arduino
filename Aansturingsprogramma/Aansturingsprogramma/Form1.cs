@@ -27,11 +27,13 @@ namespace Aansturingsprogramma
         bool Ledraster6 = false;
         bool Ledraster7 = false;
         bool Ledraster8 = false;
+        int[] code;
+        int EffectNumber = 1;
 
         public Form1()
         {
             InitializeComponent();
-            disableControls();
+            //disableControls();
             getAvailableComPorts();
         }
 
@@ -251,41 +253,328 @@ namespace Aansturingsprogramma
         //effect 1
         private void checkBox32_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox32.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //effect 2
         private void checkBox31_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox31.Checked)
+            {
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //effect 3
         private void checkBox22_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox22.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //effect 4
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox21.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //effect 5
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox12.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //Effect 6
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox11.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
         }
         //Effect 7
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox8.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+                if (checkBox7.Checked)
+                {
+                    checkBox7.Checked = false;
+                }
+            }
+            set_Effect_Status();
 
         }
         //effect 8
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox7.Checked)
+            {
+                if (checkBox31.Checked)
+                {
+                    checkBox31.Checked = false;
+                }
+                if (checkBox22.Checked)
+                {
+                    checkBox22.Checked = false;
+                }
+                if (checkBox21.Checked)
+                {
+                    checkBox21.Checked = false;
+                }
+                if (checkBox12.Checked)
+                {
+                    checkBox12.Checked = false;
+                }
+                if (checkBox11.Checked)
+                {
+                    checkBox11.Checked = false;
+                }
+                if (checkBox8.Checked)
+                {
+                    checkBox8.Checked = false;
+                }
+                if (checkBox32.Checked)
+                {
+                    checkBox32.Checked = false;
+                }
+            }
+            set_Effect_Status();
+
+        }
+
+        private void set_Effect_Status()
+        {
+            if (checkBox7.Checked)
+            {
+                EffectNumber = 1;
+            }
+            if (checkBox31.Checked)
+            {
+                EffectNumber = 2;
+            }
+            if (checkBox22.Checked)
+            {
+                EffectNumber = 3;
+            }
+            if (checkBox21.Checked)
+            {
+                EffectNumber = 4;
+            }
+            if (checkBox12.Checked)
+            {
+                EffectNumber = 5;
+            }
+            if (checkBox11.Checked)
+            {
+                EffectNumber = 6;
+            }
+            if (checkBox8.Checked)
+            {
+                EffectNumber = 7;
+            }
+            if (checkBox32.Checked)
+            {
+                EffectNumber = 8;
+            }
 
         }
         //snelheid naam
