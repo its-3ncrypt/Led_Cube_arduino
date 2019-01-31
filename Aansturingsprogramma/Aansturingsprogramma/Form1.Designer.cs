@@ -54,6 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox73 = new System.Windows.Forms.CheckBox();
             this.checkBox74 = new System.Windows.Forms.CheckBox();
@@ -119,7 +120,6 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.tabs.SuspendLayout();
             this.Effecten.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -202,6 +202,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Connect";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // checkBox7
             // 
@@ -297,7 +298,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "upload";
+            this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -317,6 +318,7 @@
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Effect parameter 2";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // numericUpDown2
             // 
@@ -363,9 +365,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(158, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Snelheid";
+            this.label2.Text = "Speed";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -400,7 +402,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "upload";
+            this.button2.Text = "Upload";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -409,9 +411,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(7, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 2;
-            this.label5.Text = "frame";
+            this.label5.Text = "Frame";
             // 
             // numericUpDown4
             // 
@@ -498,6 +500,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 197);
             this.panel1.TabIndex = 0;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(285, 96);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(55, 20);
+            this.numericUpDown5.TabIndex = 80;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged_1);
             // 
             // label6
             // 
@@ -1211,29 +1236,6 @@
             this.checkBox1.Text = " ";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(285, 96);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown5.TabIndex = 80;
-            this.numericUpDown5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged_1);
             // 
             // Form1
             // 

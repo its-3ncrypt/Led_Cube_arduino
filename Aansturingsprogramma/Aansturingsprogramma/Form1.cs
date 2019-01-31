@@ -29,12 +29,33 @@ namespace Aansturingsprogramma
         bool Ledraster8 = false;
         int[] code;
         int EffectNumber = 1;
+        int Snelheid = 2;
+        int Para1 = 0;
+        int Para2 = 0;
+        int Slide = 1;
+        int Frame = 0;
+        bool ThereArePorts = false;
 
         public Form1()
         {
             InitializeComponent();
-            //disableControls();
+            disableControls();
             getAvailableComPorts();
+            //poorten zichtbaar maken
+            foreach (string port in ports)
+            {
+                comboBox1.Items.Add(port);
+                Console.WriteLine(port);
+                if (ports[0] != null)
+                {
+                    comboBox1.SelectedItem = ports[0];
+                    ThereArePorts = true;
+                }
+                else
+                {
+                    ThereArePorts = false;
+                }
+            }
         }
 
         //alle poorten opzoeken
@@ -42,6 +63,8 @@ namespace Aansturingsprogramma
         {
             ports = SerialPort.GetPortNames();
         }
+
+
 
         //lock zetten op alle knoppen voor het verbinden
         private void disableControls()
@@ -215,14 +238,17 @@ namespace Aansturingsprogramma
 
         private void connectToArduino()
         {
-            isConnected = true;
             string selectedPort = comboBox1.GetItemText(comboBox1.SelectedItem);
-            port = new SerialPort(selectedPort, 9600, Parity.None, 8, StopBits.One);
-            port.Open();
-            //AAN TE PASSEN!
-            //port.Write("#STAR\n");
-            //button1.Text = "Disconnect";
-            enableControls();
+            if (ThereArePorts == true)
+            {
+                isConnected = true;
+                port = new SerialPort(selectedPort, 9600, Parity.None, 8, StopBits.One);
+                port.Open();
+                //AAN TE PASSEN!
+                //port.Write("#STAR\n");
+                button3.Text = "Disconnect";
+                enableControls();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -238,17 +264,17 @@ namespace Aansturingsprogramma
         //Effecten
         private void Effecten_Click(object sender, EventArgs e)
         {
-
+            //leeg laten
         }
         //Generator
         private void Generator_Click(object sender, EventArgs e)
         {
-
+            //leeg laten
         }
         //Simpele naam Effecten
         private void label1_Click(object sender, EventArgs e)
         {
-
+            //leeg laten
         }        
         //effect 1
         private void checkBox32_CheckedChanged(object sender, EventArgs e)
@@ -580,35 +606,41 @@ namespace Aansturingsprogramma
         //snelheid naam
         private void label2_Click(object sender, EventArgs e)
         {
-
+            //leeg laten
         }
         //snelheid nummer
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            Snelheid = Convert.ToInt32(numericUpDown1.Value);
         }
         //effect parameter 1
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-
+            Para1 = Convert.ToInt32(numericUpDown2.Value);
         }
         //effect parameter 2
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-
+            Para2 = Convert.ToInt32(numericUpDown3.Value);
         }
         //upload button effecten
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Upload();
         }
 
+
+        //Upload algoritme
+        private void Upload()
+        {
+            //NOG BIJ TE WERKEN
+        }
 
         ///effect generators
         //frame parameters
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-
+            Frame = Convert.ToInt32(numericUpDown4.Value);
         }
 
 
@@ -937,27 +969,43 @@ namespace Aansturingsprogramma
         //effecten generator upload
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-        
-        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+            Upload();
+        }   
         //de connectie protocol keuze
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+       private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
         //led selector slide
         private void numericUpDown5_ValueChanged_1(object sender, EventArgs e)
         {
-           // int x = ConvertToInt(numericUpDown5.Value);
+           int slide = Convert.ToInt32(numericUpDown5.Value);
         }
-        //de connectie protocol keuze
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        //label Parameter 2
+        private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+        //Connect knop
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                disconnectFromArduino();
+            }
+        }
+        //alle connectie afbreken
+        private void disconnectFromArduino()
+        {
+            isConnected = false;
+            port.Close();
+            button3.Text = "Connect";
+            disableControls();
+            //resetDefaults(); nog aan te maken
         }
     }
 }
