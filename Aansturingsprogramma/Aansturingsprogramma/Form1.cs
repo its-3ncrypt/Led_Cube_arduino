@@ -19,15 +19,15 @@ namespace Aansturingsprogramma
         bool isConnected = false;
         String[] ports;
         SerialPort port;
-        bool Ledraster1 = true;
-        bool Ledraster2 = false;
-        bool Ledraster3 = false;
-        bool Ledraster4 = false;
-        bool Ledraster5 = false;
-        bool Ledraster6 = false;
-        bool Ledraster7 = false;
-        bool Ledraster8 = false;
-        int[] code;
+        bool Ledraster1;
+        bool Ledraster2;
+        bool Ledraster3;
+        bool Ledraster4;
+        bool Ledraster5;
+        bool Ledraster6;
+        bool Ledraster7;
+        string code;
+        int[] ledGen = new int[800];
         int EffectNumber = 1;
         int Snelheid = 2;
         int Para1 = 0;
@@ -649,32 +649,380 @@ namespace Aansturingsprogramma
         //led 1
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox1.Checked==false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[0] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[64] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[128] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[192] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[256] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[320] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[384] = 1;
+                }
+                else
+                {
+                    ledGen[448] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[0] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[64] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[128] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[192] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[256] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[320] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[384] = 0;
+                }
+                else
+                {
+                    ledGen[448] = 0;
+                }
+            }
         }
         //led 2
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox2.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[1] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[65] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[129] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[193] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[257] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[321] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[385] = 1;
+                }
+                else
+                {
+                    ledGen[449] = 1;
+                }
+            }
+            else
+            {
+                if (checkBox2.Checked == false)
+                {
+                    if (Ledraster1 == true)
+                    {
+                        ledGen[1] = 0;
+                    }
+                    else if (Ledraster2 == true)
+                    {
+                        ledGen[65] = 0;
+                    }
+                    else if (Ledraster3 == true)
+                    {
+                        ledGen[129] = 0;
+                    }
+                    else if (Ledraster4 == true)
+                    {
+                        ledGen[193] = 0;
+                    }
+                    else if (Ledraster5 == true)
+                    {
+                        ledGen[257] = 0;
+                    }
+                    else if (Ledraster6 == true)
+                    {
+                        ledGen[321] = 0;
+                    }
+                    else if (Ledraster7 == true)
+                    {
+                        ledGen[385] = 0;
+                    }
+                    else
+                    {
+                        ledGen[449] = 0;
+                    }
+                }
+            }
         }
         //led 3
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox4.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[2] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[66] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[130] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[194] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[258] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[322] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[386] = 1;
+                }
+                else
+                {
+                    ledGen[450] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[2] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[66] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[130] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[194] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[258] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[322] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[386] = 0;
+                }
+                else
+                {
+                    ledGen[450] = 0;
+                }
+            }
         }
         //led 4
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox3.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[3] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[67] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[131] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[195] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[259] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[323] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[387] = 1;
+                }
+                else
+                {
+                    ledGen[451] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[3] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[67] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[131] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[195] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[259] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[323] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[387] = 0;
+                }
+                else
+                {
+                    ledGen[451] = 0;
+                }
+            }
         }
         //led 5
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox6.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[4] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[68] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[132] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[196] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[260] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[324] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[388] = 1;
+                }
+                else
+                {
+                    ledGen[452] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[4] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[68] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[132] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[196] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[260] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[324] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[388] = 0;
+                }
+                else
+                {
+                    ledGen[452] = 0;
+                }
+            }
         }
         //led 6
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-
+            //Zie vorige
         }
         //led 7
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
@@ -977,9 +1325,86 @@ namespace Aansturingsprogramma
 
         }
         //led selector slide
-        private void numericUpDown5_ValueChanged_1(object sender, EventArgs e)
+        public void numericUpDown5_ValueChanged_1(object sender, EventArgs e)
         {
-           int slide = Convert.ToInt32(numericUpDown5.Value);
+           Slide = Convert.ToInt32(numericUpDown5.Value);
+            switch (Slide)
+            {
+                case 1:
+                    Ledraster1 = true;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+                case 2:
+                    Ledraster1 = false;
+                    Ledraster2 = true;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+                case 3:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = true;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+                case 4:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = true;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+                case 5:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = true;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+                case 6:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = true;
+                    Ledraster7 = false;
+                    break;
+                case 7:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = true;
+                    break;
+                case 8:
+                    Ledraster1 = false;
+                    Ledraster2 = false;
+                    Ledraster3 = false;
+                    Ledraster4 = false;
+                    Ledraster5 = false;
+                    Ledraster6 = false;
+                    Ledraster7 = false;
+                    break;
+
+
+            }
         }
         //label Parameter 2
         private void label4_Click(object sender, EventArgs e)
@@ -1006,6 +1431,10 @@ namespace Aansturingsprogramma
             button3.Text = "Connect";
             disableControls();
             //resetDefaults(); nog aan te maken
+        }
+        private void resetgrid()
+        {
+            //nog aan te vullen
         }
     }
 }
