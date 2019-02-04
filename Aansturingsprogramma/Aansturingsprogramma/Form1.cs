@@ -39,7 +39,7 @@ namespace Aansturingsprogramma
         public Form1()
         {
             InitializeComponent();
-            //disableControls();
+            disableControls();
             getAvailableComPorts();
             //poorten zichtbaar maken
             foreach (string port in ports)
@@ -1194,122 +1194,122 @@ namespace Aansturingsprogramma
         {
 
         }
-        //led 40
+        //led 41
         private void checkBox100_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 41
+        //led 42
         private void checkBox99_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 42
+        //led 43
         private void checkBox98_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 43
+        //led 44
         private void checkBox97_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 44
+        //led 45
         private void checkBox96_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 45
+        //led 46
         private void checkBox95_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 46
+        //led 47
         private void checkBox94_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 47
+        //led 48
         private void checkBox93_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 48
+        //led 49
         private void checkBox90_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 49
+        //led 50
         private void checkBox89_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 50
+        //led 51
         private void checkBox88_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 51
+        //led 52
         private void checkBox87_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 52
+        //led 53
         private void checkBox86_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 53
+        //led 54
         private void checkBox85_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 54
+        //led 55
         private void checkBox84_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 55
+        //led 56
         private void checkBox83_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 56
+        //led 57
         private void checkBox80_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 57
+        //led 58
         private void checkBox79_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 58
+        //led 59
         private void checkBox78_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 59
+        //led 60
         private void checkBox77_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 60
+        //led 61
         private void checkBox76_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 61
+        //led 62
         private void checkBox75_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 62
+        //led 63
         private void checkBox74_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //led 63
+        //led 64
         private void checkBox73_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -1434,7 +1434,7 @@ namespace Aansturingsprogramma
         }
         private void resetgrid()
         {
-            //nog aan te vullen
+            checkBox1.Checked = false;
         }
     }
 }
