@@ -39,7 +39,7 @@ namespace Aansturingsprogramma
         public Form1()
         {
             InitializeComponent();
-            disableControls();
+            //disableControls();
             getAvailableComPorts();
             //poorten zichtbaar maken
             foreach (string port in ports)
@@ -566,7 +566,7 @@ namespace Aansturingsprogramma
             set_Effect_Status();
 
         }
-
+        //effect nummer genereren
         private void set_Effect_Status()
         {
             if (checkBox7.Checked)
