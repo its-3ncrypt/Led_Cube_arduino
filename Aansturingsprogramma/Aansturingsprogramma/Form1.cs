@@ -2207,7 +2207,76 @@ namespace Aansturingsprogramma
         //led 22
         private void checkBox25_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox17.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 21] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 85] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 150] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 213] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 277] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 341] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 405] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 468] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 21] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 85] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 150] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 213] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 277] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 341] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 405] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 468] = 0;
+                }
+            }
         }
         //led 23
         private void checkBox24_CheckedChanged(object sender, EventArgs e)
