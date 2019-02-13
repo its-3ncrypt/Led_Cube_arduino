@@ -3021,92 +3021,1334 @@ namespace Aansturingsprogramma
         //led 33
         private void checkBox50_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox50.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 32] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 96] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 161] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 224] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 288] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 352] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 416] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 479] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 32] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 96] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 161] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 224] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 288] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 352] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 416] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 479] = 0;
+                }
+            }
         }
         //led 34
         private void checkBox49_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox49.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 33] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 97] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 162] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 225] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 289] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 353] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 417] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 480] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 33] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 97] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 162] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 225] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 289] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 353] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 417] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 480] = 0;
+                }
+            }
         }
         //led 35
         private void checkBox48_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox48.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 34] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 98] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 163] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 226] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 290] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 354] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 418] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 481] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 34] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 98] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 163] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 226] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 290] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 354] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 418] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 481] = 0;
+                }
+            }
         }
         //led 36
         private void checkBox47_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox47.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 35] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 99] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 164] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 227] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 291] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 355] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 419] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 482] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 35] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 99] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 164] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 227] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 291] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 355] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 419] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 482] = 0;
+                }
+            }
         }
         //led 37
         private void checkBox46_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox46.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 36] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 100] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 165] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 228] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 292] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 356] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 420] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 483] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 36] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 100] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 165] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 228] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 292] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 356] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 420] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 483] = 0;
+                }
+            }
         }
         //led 38
         private void checkBox45_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox45.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 37] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 101] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 166] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 229] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 293] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 357] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 421] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 484] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 37] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 101] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 166] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 229] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 293] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 357] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 421] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 484] = 0;
+                }
+            }
         }
         //led 39
         private void checkBox44_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox44.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 38] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 102] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 167] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 230] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 294] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 358] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 422] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 485] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 38] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 102] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 167] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 230] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 294] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 358] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 422] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 485] = 0;
+                }
+            }
         }
         //led 40
         private void checkBox43_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox43.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 39] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 103] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 168] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 231] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 295] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 359] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 423] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 486] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 39] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 103] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 168] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 231] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 295] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 359] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 423] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 486] = 0;
+                }
+            }
         }
         //led 41
         private void checkBox100_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox100.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 40] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 104] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 169] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 232] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 296] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 360] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 424] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 487] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 40] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 104] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 169] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 232] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 296] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 360] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 424] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 487] = 0;
+                }
+            }
         }
         //led 42
         private void checkBox99_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox99.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 41] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 105] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 170] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 233] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 297] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 361] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 425] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 488] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 41] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 105] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 170] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 233] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 297] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 361] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 425] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 488] = 0;
+                }
+            }
         }
         //led 43
         private void checkBox98_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox98.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 42] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 106] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 171] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 234] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 298] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 362] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 426] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 489] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 42] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 106] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 171] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 234] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 298] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 362] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 426] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 489] = 0;
+                }
+            }
         }
         //led 44
         private void checkBox97_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox97.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 43] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 107] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 172] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 235] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 299] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 363] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 427] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 490] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 43] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 107] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 172] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 235] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 299] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 363] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 427] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 490] = 0;
+                }
+            }
         }
         //led 45
         private void checkBox96_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox96.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 44] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 108] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 173] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 236] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 300] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 364] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 428] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 491] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 44] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 108] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 173] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 236] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 300] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 364] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 428] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 491] = 0;
+                }
+            }
         }
         //led 46
         private void checkBox95_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox95.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 45] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 109] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 174] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 237] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 301] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 365] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 429] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 492] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 45] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 109] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 174] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 237] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 301] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 365] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 429] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 492] = 0;
+                }
+            }
         }
         //led 47
         private void checkBox94_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox94.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 46] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 110] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 175] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 238] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 302] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 366] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 430] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 493] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 46] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 110] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 175] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 238] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 302] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 366] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 430] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 493] = 0;
+                }
+            }
         }
         //led 48
         private void checkBox93_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox93.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 47] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 111] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 176] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 239] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 303] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 367] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 431] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 494] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 47] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 111] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 176] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 239] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 303] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 367] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 431] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 494] = 0;
+                }
+            }
         }
         //led 49
         private void checkBox90_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox90.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 48] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 112] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 177] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 240] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 304] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 368] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 432] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 495] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 48] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 112] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 177] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 240] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 304] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 368] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 432] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 495] = 0;
+                }
+            }
         }
         //led 50
         private void checkBox89_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox89.Checked == false)
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 49] = 1;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 113] = 1;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 178] = 1;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 241] = 1;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 305] = 1;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 369] = 1;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 433] = 1;
+                }
+                else
+                {
+                    ledGen[Frame, 496] = 1;
+                }
+            }
+            else
+            {
+                if (Ledraster1 == true)
+                {
+                    ledGen[Frame, 49] = 0;
+                }
+                else if (Ledraster2 == true)
+                {
+                    ledGen[Frame, 113] = 0;
+                }
+                else if (Ledraster3 == true)
+                {
+                    ledGen[Frame, 178] = 0;
+                }
+                else if (Ledraster4 == true)
+                {
+                    ledGen[Frame, 241] = 0;
+                }
+                else if (Ledraster5 == true)
+                {
+                    ledGen[Frame, 305] = 0;
+                }
+                else if (Ledraster6 == true)
+                {
+                    ledGen[Frame, 369] = 0;
+                }
+                else if (Ledraster7 == true)
+                {
+                    ledGen[Frame, 433] = 0;
+                }
+                else
+                {
+                    ledGen[Frame, 496] = 0;
+                }
+            }
         }
         //led 51
         private void checkBox88_CheckedChanged(object sender, EventArgs e)
