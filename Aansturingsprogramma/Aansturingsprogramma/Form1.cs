@@ -27,7 +27,7 @@ namespace Aansturingsprogramma
         bool Ledraster6;
         bool Ledraster7;
         string code;
-        int[,] ledGen = new int[20,511];
+        int[,] ledGen = new int[20,512];
         int EffectNumber = 1;
         int Snelheid = 2;
         int Para1 = 0;
@@ -39,8 +39,9 @@ namespace Aansturingsprogramma
         public Form1()
         {
             InitializeComponent();
-            disableControls();
+            //disableControls();
             getAvailableComPorts();
+            EmptyCode(0);
             //poorten zichtbaar maken
             foreach (string port in ports)
             {
@@ -64,7 +65,14 @@ namespace Aansturingsprogramma
             ports = SerialPort.GetPortNames();
         }
 
-
+        //code leeg genereren
+        private void EmptyCode(int slida)
+        {
+            for(int i = 0; i < 512; i++)
+            {
+                ledGen[slida, i] = 0;
+            }
+        }
 
         //lock zetten op alle knoppen voor het verbinden
         private void disableControls()
@@ -5477,10 +5485,10 @@ namespace Aansturingsprogramma
 
 
             }
-
+            GeneratorShowBox();
         }
         //code vinkjes terugzetten in alle vakjes
-        private void GeneratorShowBox(int Slide, int Frame)
+        private void GeneratorShowBox()
         {
             switch (Slide)
             {
@@ -5589,6 +5597,1520 @@ namespace Aansturingsprogramma
                                     break;
                                 case 32:
                                     checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 64; i < 128; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i-64)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 3:
+                    for (int i = 128; i < 192; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 128)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 4:
+                    for (int i = 192; i < 256; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 192)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 5:
+                    for (int i = 256; i < 320; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 256)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 6:
+                    for (int i = 320; i < 384; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 320)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 7:
+                    for (int i = 384; i < 448; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 384)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 8:
+                    for (int i = 448; i < 512; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch (i - 448)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = true;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = true;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = true;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = true;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = true;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = true;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = true;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = true;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = true;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = true;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = true;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = true;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = true;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = true;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = true;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = true;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = true;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = true;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = true;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = true;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = true;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = true;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = true;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = true;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = true;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = true;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = true;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = true;
                                     break;
                             }
                         }
