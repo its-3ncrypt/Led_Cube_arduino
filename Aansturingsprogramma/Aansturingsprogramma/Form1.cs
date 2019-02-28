@@ -28,7 +28,7 @@ namespace Aansturingsprogramma
         bool Ledraster7;
         string code;
         int[,] ledGen = new int[20,511];
-        int EffectNumber =1;
+        int EffectNumber = 1;
         int Snelheid = 2;
         int Para1 = 0;
         int Para2 = 0;
@@ -5478,6 +5478,123 @@ namespace Aansturingsprogramma
 
             }
 
+        }
+        //code vinkjes terugzetten in alle vakjes
+        private void GeneratorShowBox(int Slide, int Frame)
+        {
+            switch (Slide)
+            {
+                case 1:
+                    for (int i = 0; i < 64; i++)
+                    {
+                        if (i == ledGen[Frame, i])
+                        {
+                            switch(i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = true;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = true;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = true;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = true;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = true;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = true;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = true;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = true;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = true;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = true;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = true;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = true;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = true;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = true;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = true;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = true;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = true;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = true;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = true;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = true;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = true;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = true;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = true;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = true;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = true;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = true;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = true;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = true;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = true;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = true;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = true;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = true;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = true;
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+            }
         }
         //label Parameter 2
         private void label4_Click(object sender, EventArgs e)
