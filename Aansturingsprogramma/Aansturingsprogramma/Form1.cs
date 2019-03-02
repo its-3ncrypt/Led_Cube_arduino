@@ -19,13 +19,14 @@ namespace Aansturingsprogramma
         bool isConnected = false;
         String[] ports;
         SerialPort port;
-        bool Ledraster1;
-        bool Ledraster2;
-        bool Ledraster3;
-        bool Ledraster4;
-        bool Ledraster5;
-        bool Ledraster6;
-        bool Ledraster7;
+        bool Ledraster1 = true;
+        bool Ledraster2 = false;
+        bool Ledraster3 = false;
+        bool Ledraster4 = false;
+        bool Ledraster5 = false;
+        bool Ledraster6 = false;
+        bool Ledraster7 = false;
+        bool IsFrozen = false;
         string code;
         int[,] ledGen = new int[20,512];
         int EffectNumber = 1;
@@ -657,7 +658,11 @@ namespace Aansturingsprogramma
         //led 1
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked==false)
+            if (IsFrozen)
+            {
+                return;
+            }
+            if (checkBox1.Checked==false)
             {
                 if (Ledraster1 == true)
                 {
@@ -731,6 +736,10 @@ namespace Aansturingsprogramma
         //led 2
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox2.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -808,6 +817,10 @@ namespace Aansturingsprogramma
         //led 3
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox4.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -882,6 +895,10 @@ namespace Aansturingsprogramma
         //led 4
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox3.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -956,6 +973,10 @@ namespace Aansturingsprogramma
         //led 5
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox6.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1030,6 +1051,10 @@ namespace Aansturingsprogramma
         //led 6
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox5.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1104,6 +1129,10 @@ namespace Aansturingsprogramma
         //led 7
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox10.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1178,6 +1207,10 @@ namespace Aansturingsprogramma
         //led 8
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox9.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1252,6 +1285,10 @@ namespace Aansturingsprogramma
         //led 9
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox20.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1327,6 +1364,10 @@ namespace Aansturingsprogramma
         //led 10
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox19.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1401,6 +1442,10 @@ namespace Aansturingsprogramma
         //led 11
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox18.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1475,6 +1520,10 @@ namespace Aansturingsprogramma
         //led 12
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox17.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1549,6 +1598,10 @@ namespace Aansturingsprogramma
         //led 13
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox16.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1623,6 +1676,10 @@ namespace Aansturingsprogramma
         //led 14
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox15.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1697,6 +1754,10 @@ namespace Aansturingsprogramma
         //led 15
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox14.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1771,6 +1832,10 @@ namespace Aansturingsprogramma
         //led 16
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox13.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1845,6 +1910,10 @@ namespace Aansturingsprogramma
         //led 17
         private void checkBox30_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox30.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1919,6 +1988,10 @@ namespace Aansturingsprogramma
         //led 18
         private void checkBox29_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox29.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -1993,6 +2066,10 @@ namespace Aansturingsprogramma
         //led 19
         private void checkBox28_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox28.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2067,6 +2144,10 @@ namespace Aansturingsprogramma
         //led 20
         private void checkBox27_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox27.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2141,6 +2222,10 @@ namespace Aansturingsprogramma
         //led 21
         private void checkBox26_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox26.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2215,6 +2300,10 @@ namespace Aansturingsprogramma
         //led 22
         private void checkBox25_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox25.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2289,6 +2378,10 @@ namespace Aansturingsprogramma
         //led 23
         private void checkBox24_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox24.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2363,6 +2456,10 @@ namespace Aansturingsprogramma
         //led 24
         private void checkBox23_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox23.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2437,6 +2534,10 @@ namespace Aansturingsprogramma
         //led 25
         private void checkBox40_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox40.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2511,6 +2612,10 @@ namespace Aansturingsprogramma
         //led 26
         private void checkBox39_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox39.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2585,6 +2690,10 @@ namespace Aansturingsprogramma
         //led 27
         private void checkBox38_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox38.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2659,6 +2768,10 @@ namespace Aansturingsprogramma
         //led 28
         private void checkBox37_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox37.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2733,6 +2846,10 @@ namespace Aansturingsprogramma
         //led 29
         private void checkBox36_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox36.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2807,6 +2924,10 @@ namespace Aansturingsprogramma
         //led 30
         private void checkBox35_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox35.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2881,6 +3002,10 @@ namespace Aansturingsprogramma
         //led 31
         private void checkBox34_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox34.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -2955,6 +3080,10 @@ namespace Aansturingsprogramma
         //led 32
         private void checkBox33_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox33.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3029,6 +3158,10 @@ namespace Aansturingsprogramma
         //led 33
         private void checkBox50_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox50.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3103,6 +3236,10 @@ namespace Aansturingsprogramma
         //led 34
         private void checkBox49_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox49.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3177,6 +3314,10 @@ namespace Aansturingsprogramma
         //led 35
         private void checkBox48_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox48.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3251,6 +3392,10 @@ namespace Aansturingsprogramma
         //led 36
         private void checkBox47_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox47.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3325,6 +3470,10 @@ namespace Aansturingsprogramma
         //led 37
         private void checkBox46_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox46.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3399,6 +3548,10 @@ namespace Aansturingsprogramma
         //led 38
         private void checkBox45_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox45.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3473,6 +3626,10 @@ namespace Aansturingsprogramma
         //led 39
         private void checkBox44_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox44.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3547,6 +3704,10 @@ namespace Aansturingsprogramma
         //led 40
         private void checkBox43_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox43.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3621,6 +3782,10 @@ namespace Aansturingsprogramma
         //led 41
         private void checkBox100_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox100.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3695,6 +3860,10 @@ namespace Aansturingsprogramma
         //led 42
         private void checkBox99_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox99.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3769,6 +3938,10 @@ namespace Aansturingsprogramma
         //led 43
         private void checkBox98_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox98.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3843,6 +4016,10 @@ namespace Aansturingsprogramma
         //led 44
         private void checkBox97_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox97.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3917,6 +4094,10 @@ namespace Aansturingsprogramma
         //led 45
         private void checkBox96_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox96.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -3991,6 +4172,10 @@ namespace Aansturingsprogramma
         //led 46
         private void checkBox95_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox95.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4065,6 +4250,10 @@ namespace Aansturingsprogramma
         //led 47
         private void checkBox94_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox94.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4139,6 +4328,10 @@ namespace Aansturingsprogramma
         //led 48
         private void checkBox93_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox93.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4213,6 +4406,10 @@ namespace Aansturingsprogramma
         //led 49
         private void checkBox90_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox90.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4287,6 +4484,10 @@ namespace Aansturingsprogramma
         //led 50
         private void checkBox89_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox89.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4361,6 +4562,10 @@ namespace Aansturingsprogramma
         //led 51
         private void checkBox88_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox88.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4435,6 +4640,10 @@ namespace Aansturingsprogramma
         //led 52
         private void checkBox87_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox87.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4509,6 +4718,10 @@ namespace Aansturingsprogramma
         //led 53
         private void checkBox86_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox86.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4583,6 +4796,10 @@ namespace Aansturingsprogramma
         //led 54
         private void checkBox85_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox85.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4657,6 +4874,10 @@ namespace Aansturingsprogramma
         //led 55
         private void checkBox84_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox84.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4731,6 +4952,10 @@ namespace Aansturingsprogramma
         //led 56
         private void checkBox83_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox83.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4805,6 +5030,10 @@ namespace Aansturingsprogramma
         //led 57
         private void checkBox80_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox80.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4879,6 +5108,10 @@ namespace Aansturingsprogramma
         //led 58
         private void checkBox79_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox79.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -4953,6 +5186,10 @@ namespace Aansturingsprogramma
         //led 59
         private void checkBox78_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox78.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5027,6 +5264,10 @@ namespace Aansturingsprogramma
         //led 60
         private void checkBox77_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox77.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5101,6 +5342,10 @@ namespace Aansturingsprogramma
         //led 61
         private void checkBox76_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox76.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5175,6 +5420,10 @@ namespace Aansturingsprogramma
         //led 62
         private void checkBox75_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox75.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5249,6 +5498,10 @@ namespace Aansturingsprogramma
         //led 63
         private void checkBox74_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox74.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5323,6 +5576,10 @@ namespace Aansturingsprogramma
         //led 64
         private void checkBox73_CheckedChanged(object sender, EventArgs e)
         {
+            if (IsFrozen)
+            {
+                return;
+            }
             if (checkBox73.Checked == false)
             {
                 if (Ledraster1 == true)
@@ -5490,12 +5747,13 @@ namespace Aansturingsprogramma
         //code vinkjes terugzetten in alle vakjes
         private void GeneratorShowBox()
         {
+            IsFrozen = true;
             switch (Slide)
             {
                 case 1:
                     for (int i = 0; i < 64; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch(i)
                             {
@@ -5693,12 +5951,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 2:
                     for (int i = 64; i < 128; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i-64)
                             {
@@ -5896,12 +6352,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 3:
                     for (int i = 128; i < 192; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 128)
                             {
@@ -6099,12 +6753,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 4:
                     for (int i = 192; i < 256; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 192)
                             {
@@ -6302,12 +7154,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 5:
                     for (int i = 256; i < 320; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 256)
                             {
@@ -6505,12 +7555,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 6:
                     for (int i = 320; i < 384; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 320)
                             {
@@ -6708,12 +7956,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 7:
                     for (int i = 384; i < 448; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 384)
                             {
@@ -6911,12 +8357,210 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
                 case 8:
                     for (int i = 448; i < 512; i++)
                     {
-                        if (i == ledGen[Frame, i])
+                        if (1 == ledGen[Frame, i])
                         {
                             switch (i - 448)
                             {
@@ -7114,9 +8758,208 @@ namespace Aansturingsprogramma
                                     break;
                             }
                         }
+                        else
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    checkBox1.Checked = false;
+                                    break;
+                                case 1:
+                                    checkBox2.Checked = false;
+                                    break;
+                                case 2:
+                                    checkBox4.Checked = false;
+                                    break;
+                                case 3:
+                                    checkBox3.Checked = false;
+                                    break;
+                                case 4:
+                                    checkBox6.Checked = false;
+                                    break;
+                                case 5:
+                                    checkBox5.Checked = false;
+                                    break;
+                                case 6:
+                                    checkBox10.Checked = false;
+                                    break;
+                                case 7:
+                                    checkBox9.Checked = false;
+                                    break;
+                                case 8:
+                                    checkBox20.Checked = false;
+                                    break;
+                                case 9:
+                                    checkBox19.Checked = false;
+                                    break;
+                                case 10:
+                                    checkBox18.Checked = false;
+                                    break;
+                                case 11:
+                                    checkBox17.Checked = false;
+                                    break;
+                                case 12:
+                                    checkBox16.Checked = false;
+                                    break;
+                                case 13:
+                                    checkBox15.Checked = false;
+                                    break;
+                                case 14:
+                                    checkBox14.Checked = false;
+                                    break;
+                                case 15:
+                                    checkBox13.Checked = false;
+                                    break;
+                                case 16:
+                                    checkBox30.Checked = false;
+                                    break;
+                                case 17:
+                                    checkBox29.Checked = false;
+                                    break;
+                                case 18:
+                                    checkBox28.Checked = false;
+                                    break;
+                                case 19:
+                                    checkBox27.Checked = false;
+                                    break;
+                                case 20:
+                                    checkBox26.Checked = false;
+                                    break;
+                                case 21:
+                                    checkBox25.Checked = false;
+                                    break;
+                                case 22:
+                                    checkBox24.Checked = false;
+                                    break;
+                                case 23:
+                                    checkBox23.Checked = false;
+                                    break;
+                                case 24:
+                                    checkBox40.Checked = false;
+                                    break;
+                                case 25:
+                                    checkBox39.Checked = false;
+                                    break;
+                                case 26:
+                                    checkBox38.Checked = false;
+                                    break;
+                                case 27:
+                                    checkBox37.Checked = false;
+                                    break;
+                                case 28:
+                                    checkBox36.Checked = false;
+                                    break;
+                                case 29:
+                                    checkBox35.Checked = false;
+                                    break;
+                                case 30:
+                                    checkBox34.Checked = false;
+                                    break;
+                                case 31:
+                                    checkBox33.Checked = false;
+                                    break;
+                                case 32:
+                                    checkBox50.Checked = false;
+                                    break;
+                                case 33:
+                                    checkBox49.Checked = false;
+                                    break;
+                                case 34:
+                                    checkBox48.Checked = false;
+                                    break;
+                                case 35:
+                                    checkBox47.Checked = false;
+                                    break;
+                                case 36:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 37:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 38:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 39:
+                                    checkBox43.Checked = false;
+                                    break;
+                                case 40:
+                                    checkBox100.Checked = false;
+                                    break;
+                                case 41:
+                                    checkBox99.Checked = false;
+                                    break;
+                                case 42:
+                                    checkBox98.Checked = false;
+                                    break;
+                                case 43:
+                                    checkBox97.Checked = false;
+                                    break;
+                                case 44:
+                                    checkBox96.Checked = false;
+                                    break;
+                                case 45:
+                                    checkBox95.Checked = false;
+                                    break;
+                                case 46:
+                                    checkBox94.Checked = false;
+                                    break;
+                                case 47:
+                                    checkBox93.Checked = false;
+                                    break;
+                                case 48:
+                                    checkBox90.Checked = false;
+                                    break;
+                                case 49:
+                                    checkBox89.Checked = false;
+                                    break;
+                                case 50:
+                                    checkBox88.Checked = false;
+                                    break;
+                                case 51:
+                                    checkBox87.Checked = false;
+                                    break;
+                                case 52:
+                                    checkBox86.Checked = false;
+                                    break;
+                                case 53:
+                                    checkBox85.Checked = false;
+                                    break;
+                                case 54:
+                                    checkBox84.Checked = false;
+                                    break;
+                                case 55:
+                                    checkBox83.Checked = false;
+                                    break;
+                                case 56:
+                                    checkBox80.Checked = false;
+                                    break;
+                                case 57:
+                                    checkBox79.Checked = false;
+                                    break;
+                                case 58:
+                                    checkBox78.Checked = false;
+                                    break;
+                                case 59:
+                                    checkBox77.Checked = false;
+                                    break;
+                                case 60:
+                                    checkBox46.Checked = false;
+                                    break;
+                                case 61:
+                                    checkBox45.Checked = false;
+                                    break;
+                                case 62:
+                                    checkBox44.Checked = false;
+                                    break;
+                                case 63:
+                                    checkBox43.Checked = false;
+                                    break;
+                            }
+                        }
                     }
                     break;
             }
+            IsFrozen = false;
         }
         //label Parameter 2
         private void label4_Click(object sender, EventArgs e)
