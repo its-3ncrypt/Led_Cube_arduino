@@ -36,6 +36,7 @@ namespace Aansturingsprogramma
         int Slide = 1;
         int Frame = 0;
         bool ThereArePorts = false;
+        bool[] IsSet = new bool[19];
 
         public Form1()
         {
@@ -60,6 +61,13 @@ namespace Aansturingsprogramma
             }
         }
 
+        private void SetIsSet()
+        {
+            for(int i = 1; i <= 19; i++)
+            {
+                IsSet[i] = false;
+            }
+        }
         //alle poorten opzoeken
         void getAvailableComPorts()
         {
@@ -650,6 +658,151 @@ namespace Aansturingsprogramma
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
             Frame = Convert.ToInt32(numericUpDown4.Value);
+            GeneratorShowBox();
+            switch (Frame)
+            {
+                case 0:
+                    if (IsSet[0] == false)
+                    {
+                        EmptyCode(0);
+                        IsSet[0] = true;
+                    }
+                    break;
+                case 1:
+                    if (IsSet[1] == false)
+                    {
+                        EmptyCode(1);
+                        IsSet[1] = true;
+                    }
+                    break;
+                case 2:
+                    if (IsSet[2] == false)
+                    {
+                        EmptyCode(2);
+                        IsSet[2] = true;
+                    }
+                    break;
+                case 3:
+                    if (IsSet[3] == false)
+                    {
+                        EmptyCode(3);
+                        IsSet[3] = true;
+                    }
+                    break;
+                case 4:
+                    if (IsSet[4] == false)
+                    {
+                        EmptyCode(4);
+                        IsSet[4] = true;
+                    }
+                    break;
+                case 5:
+                    if (IsSet[5] == false)
+                    {
+                        EmptyCode(5);
+                        IsSet[5] = true;
+                    }
+                    break;
+                case 6:
+                    if (IsSet[6] == false)
+                    {
+                        EmptyCode(6);
+                        IsSet[6] = true;
+                    }
+                    break;
+                case 7:
+                    if (IsSet[7] == false)
+                    {
+                        EmptyCode(7);
+                        IsSet[7] = true;
+                    }
+                    break;
+                case 8:
+                    if (IsSet[8] == false)
+                    {
+                        EmptyCode(8);
+                        IsSet[8] = true;
+                    }
+                    break;
+                case 9:
+                    if (IsSet[9] == false)
+                    {
+                        EmptyCode(9);
+                        IsSet[9] = true;
+                    }
+                    break;
+                case 10:
+                    if (IsSet[10] == false)
+                    {
+                        EmptyCode(10);
+                        IsSet[10] = true;
+                    }
+                    break;
+                case 11:
+                    if (IsSet[11] == false)
+                    {
+                        EmptyCode(11);
+                        IsSet[11] = true;
+                    }
+                    break;
+                case 12:
+                    if (IsSet[12] == false)
+                    {
+                        EmptyCode(12);
+                        IsSet[12] = true;
+                    }
+                    break;
+                case 13:
+                    if (IsSet[13] == false)
+                    {
+                        EmptyCode(13);
+                        IsSet[13] = true;
+                    }
+                    break;
+                case 14:
+                    if (IsSet[14] == false)
+                    {
+                        EmptyCode(14);
+                        IsSet[14] = true;
+                    }
+                    break;
+                case 15:
+                    if (IsSet[15] == false)
+                    {
+                        EmptyCode(15);
+                        IsSet[15] = true;
+                    }
+                    break;
+                case 16:
+                    if (IsSet[16] == false)
+                    {
+                        EmptyCode(16);
+                        IsSet[16] = true;
+                    }
+                    break;
+                case 17:
+                    if (IsSet[17] == false)
+                    {
+                        EmptyCode(17);
+                        IsSet[17] = true;
+                    }
+                    break;
+                case 18:
+                    if (IsSet[18] == false)
+                    {
+                        EmptyCode(18);
+                        IsSet[18] = true;
+                    }
+                    break;
+                case 19:
+                    if (IsSet[19] == false)
+                    {
+                        EmptyCode(19);
+                        IsSet[19] = true;
+                    }
+                    break;
+            }
+
         }
 
 
@@ -662,7 +815,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox1.Checked==false)
+            if (checkBox1.Checked==true)
             {
                 if (Ledraster1 == true)
                 {
@@ -740,7 +893,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox2.Checked == false)
+            if (checkBox2.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -821,7 +974,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox4.Checked == false)
+            if (checkBox4.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -899,7 +1052,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox3.Checked == false)
+            if (checkBox3.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -977,7 +1130,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox6.Checked == false)
+            if (checkBox6.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1055,7 +1208,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox5.Checked == false)
+            if (checkBox5.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1133,7 +1286,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox10.Checked == false)
+            if (checkBox10.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1211,7 +1364,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox9.Checked == false)
+            if (checkBox9.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1289,7 +1442,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox20.Checked == false)
+            if (checkBox20.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1368,7 +1521,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox19.Checked == false)
+            if (checkBox19.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1446,7 +1599,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox18.Checked == false)
+            if (checkBox18.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1524,7 +1677,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox17.Checked == false)
+            if (checkBox17.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1602,7 +1755,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox16.Checked == false)
+            if (checkBox16.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1680,7 +1833,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox15.Checked == false)
+            if (checkBox15.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1758,7 +1911,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox14.Checked == false)
+            if (checkBox14.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1836,7 +1989,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox13.Checked == false)
+            if (checkBox13.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1914,7 +2067,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox30.Checked == false)
+            if (checkBox30.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -1992,7 +2145,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox29.Checked == false)
+            if (checkBox29.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2070,7 +2223,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox28.Checked == false)
+            if (checkBox28.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2148,7 +2301,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox27.Checked == false)
+            if (checkBox27.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2226,7 +2379,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox26.Checked == false)
+            if (checkBox26.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2304,7 +2457,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox25.Checked == false)
+            if (checkBox25.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2382,7 +2535,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox24.Checked == false)
+            if (checkBox24.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2460,7 +2613,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox23.Checked == false)
+            if (checkBox23.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2538,7 +2691,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox40.Checked == false)
+            if (checkBox40.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2616,7 +2769,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox39.Checked == false)
+            if (checkBox39.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2694,7 +2847,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox38.Checked == false)
+            if (checkBox38.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2772,7 +2925,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox37.Checked == false)
+            if (checkBox37.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2850,7 +3003,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox36.Checked == false)
+            if (checkBox36.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -2928,7 +3081,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox35.Checked == false)
+            if (checkBox35.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3006,7 +3159,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox34.Checked == false)
+            if (checkBox34.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3084,7 +3237,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox33.Checked == false)
+            if (checkBox33.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3162,7 +3315,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox50.Checked == false)
+            if (checkBox50.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3240,7 +3393,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox49.Checked == false)
+            if (checkBox49.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3318,7 +3471,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox48.Checked == false)
+            if (checkBox48.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3396,7 +3549,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox47.Checked == false)
+            if (checkBox47.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3474,7 +3627,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox46.Checked == false)
+            if (checkBox46.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3552,7 +3705,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox45.Checked == false)
+            if (checkBox45.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3630,7 +3783,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox44.Checked == false)
+            if (checkBox44.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3708,7 +3861,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox43.Checked == false)
+            if (checkBox43.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3786,7 +3939,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox100.Checked == false)
+            if (checkBox100.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3864,7 +4017,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox99.Checked == false)
+            if (checkBox99.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -3942,7 +4095,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox98.Checked == false)
+            if (checkBox98.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4020,7 +4173,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox97.Checked == false)
+            if (checkBox97.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4098,7 +4251,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox96.Checked == false)
+            if (checkBox96.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4176,7 +4329,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox95.Checked == false)
+            if (checkBox95.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4254,7 +4407,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox94.Checked == false)
+            if (checkBox94.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4332,7 +4485,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox93.Checked == false)
+            if (checkBox93.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4410,7 +4563,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox90.Checked == false)
+            if (checkBox90.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4488,7 +4641,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox89.Checked == false)
+            if (checkBox89.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4566,7 +4719,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox88.Checked == false)
+            if (checkBox88.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4644,7 +4797,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox87.Checked == false)
+            if (checkBox87.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4722,7 +4875,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox86.Checked == false)
+            if (checkBox86.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4800,7 +4953,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox85.Checked == false)
+            if (checkBox85.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4878,7 +5031,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox84.Checked == false)
+            if (checkBox84.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -4956,7 +5109,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox83.Checked == false)
+            if (checkBox83.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5034,7 +5187,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox80.Checked == false)
+            if (checkBox80.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5112,7 +5265,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox79.Checked == false)
+            if (checkBox79.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5190,7 +5343,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox78.Checked == false)
+            if (checkBox78.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5268,7 +5421,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox77.Checked == false)
+            if (checkBox77.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5346,7 +5499,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox76.Checked == false)
+            if (checkBox76.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5424,7 +5577,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox75.Checked == false)
+            if (checkBox75.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5502,7 +5655,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox74.Checked == false)
+            if (checkBox74.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -5580,7 +5733,7 @@ namespace Aansturingsprogramma
             {
                 return;
             }
-            if (checkBox73.Checked == false)
+            if (checkBox73.Checked == true)
             {
                 if (Ledraster1 == true)
                 {
@@ -6354,7 +6507,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-64)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -6755,7 +6908,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-128)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -7156,7 +7309,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-192)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -7557,7 +7710,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-265)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -7958,7 +8111,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-320)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -8359,7 +8512,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-384)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
@@ -8760,7 +8913,7 @@ namespace Aansturingsprogramma
                         }
                         else
                         {
-                            switch (i)
+                            switch (i-448)
                             {
                                 case 0:
                                     checkBox1.Checked = false;
