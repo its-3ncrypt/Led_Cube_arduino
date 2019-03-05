@@ -27,9 +27,8 @@ namespace Aansturingsprogramma
         bool Ledraster6 = false;
         bool Ledraster7 = false;
         bool IsFrozen = false;
-        string code;
         int[,] ledGen = new int[20,512];
-        int EffectNumber = 1;
+        int EffectNumber = 0;
         int Snelheid = 2;
         int Para1 = 0;
         int Para2 = 0;
@@ -41,7 +40,7 @@ namespace Aansturingsprogramma
         public Form1()
         {
             InitializeComponent();
-            //disableControls();
+            disableControls();
             getAvailableComPorts();
             EmptyCode(0);
             //poorten zichtbaar maken
@@ -60,7 +59,7 @@ namespace Aansturingsprogramma
                 }
             }
         }
-
+        //calculate how many frames
         private void SetIsSet()
         {
             for(int i = 1; i <= 19; i++)
@@ -74,7 +73,7 @@ namespace Aansturingsprogramma
             ports = SerialPort.GetPortNames();
         }
 
-        //code leeg genereren
+        //code leeg genereren voor 2dimensionale array
         private void EmptyCode(int slida)
         {
             for(int i = 0; i < 512; i++)
@@ -261,8 +260,7 @@ namespace Aansturingsprogramma
                 isConnected = true;
                 port = new SerialPort(selectedPort, 9600, Parity.None, 8, StopBits.One);
                 port.Open();
-                //AAN TE PASSEN!
-                //port.Write("#STAR\n");
+                port.Write("#STAR\n");
                 button3.Text = "Disconnect";
                 enableControls();
             }
@@ -618,6 +616,10 @@ namespace Aansturingsprogramma
             {
                 EffectNumber = 8;
             }
+            else
+            {
+                EffectNumber = 0;
+            }
 
         }
         //snelheid naam
@@ -650,7 +652,33 @@ namespace Aansturingsprogramma
         //Upload algoritme
         private void Upload()
         {
-            //NOG BIJ TE WERKEN
+            if (isConnected)
+            {
+                if(EffectNumber==0)
+                {
+                    port.Write(Convert.ToString(Snelheid));
+                    port.Write(Convert.ToString(EffectNumber));
+                    for (int i = 0; i <= 19; i++)
+                    {
+                        if (IsSet[i] == false)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            for (int y = 0; y < 512; y++)
+                            {
+                                port.Write(Convert.ToString(ledGen[i, y]));
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    port.Write(Convert.ToString(Snelheid));
+                    port.Write(Convert.ToString(EffectNumber));
+                }
+            }
         }
 
         ///effect generators
@@ -9138,11 +9166,6 @@ namespace Aansturingsprogramma
             port.Close();
             button3.Text = "Connect";
             disableControls();
-            //resetDefaults(); nog aan te maken
-        }
-        private void resetgrid()
-        {
-            checkBox1.Checked = false;
         }
     }
 }
