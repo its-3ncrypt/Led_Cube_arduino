@@ -27,6 +27,7 @@ namespace Aansturingsprogramma
         bool Ledraster6 = false;
         bool Ledraster7 = false;
         bool IsFrozen = false;
+        string sentCode;
         int[,] ledGen = new int[20,512];
         int EffectNumber = 0;
         int Snelheid = 2;
@@ -668,16 +669,19 @@ namespace Aansturingsprogramma
                         {
                             for (int y = 0; y < 512; y++)
                             {
-                                port.Write(Convert.ToString(ledGen[i, y]));
+                                sentCode += Convert.ToString(ledGen[i, y]);
                             }
                         }
                     }
+                    port.Write(sentCode);
+                    
                 }
                 else
                 {
                     port.Write(Convert.ToString(Snelheid));
                     port.Write(Convert.ToString(EffectNumber));
                 }
+                port.Write("\n");
             }
         }
 
