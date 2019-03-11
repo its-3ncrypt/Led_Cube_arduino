@@ -6123,16 +6123,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -6321,16 +6321,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -6524,16 +6524,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -6722,16 +6722,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -6925,16 +6925,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -7123,16 +7123,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -7326,16 +7326,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -7524,16 +7524,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -7727,16 +7727,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -7925,16 +7925,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -8128,16 +8128,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -8326,16 +8326,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -8529,16 +8529,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -8727,16 +8727,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
@@ -8930,16 +8930,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = true;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = true;
+                                    checkBox76.Checked = true;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = true;
+                                    checkBox75.Checked = true;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = true;
+                                    checkBox74.Checked = true;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = true;
+                                    checkBox73.Checked = true;
                                     break;
                             }
                         }
@@ -9128,16 +9128,16 @@ namespace Aansturingsprogramma
                                     checkBox77.Checked = false;
                                     break;
                                 case 60:
-                                    checkBox46.Checked = false;
+                                    checkBox76.Checked = false;
                                     break;
                                 case 61:
-                                    checkBox45.Checked = false;
+                                    checkBox75.Checked = false;
                                     break;
                                 case 62:
-                                    checkBox44.Checked = false;
+                                    checkBox74.Checked = false;
                                     break;
                                 case 63:
-                                    checkBox43.Checked = false;
+                                    checkBox73.Checked = false;
                                     break;
                             }
                         }
