@@ -41,7 +41,7 @@ namespace Aansturingsprogramma
         public Form1()
         {
             InitializeComponent();
-            disableControls();
+            //disableControls();
             getAvailableComPorts();
             EmptyCode(0);
             //poorten zichtbaar maken
