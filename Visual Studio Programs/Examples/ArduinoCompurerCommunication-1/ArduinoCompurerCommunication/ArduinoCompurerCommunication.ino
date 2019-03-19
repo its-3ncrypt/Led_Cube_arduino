@@ -1,4 +1,3 @@
-#include <LiquidCrystal.h>
 
 String inputString = "";         // a string to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
@@ -13,21 +12,15 @@ void setup() {
 }
 
 void loop() {
-
-if(stringComplete)
-{
-  stringComplete = false;
-  inputString = "";
-  Serial.print(inputString);
-  
-}
-
+Serial.print(inputString);
 }
 
 
 void serialEvent() {
   while (Serial.available()) {
     // get the new byte:
+    stringComplete = false;
+    inputString = "";
     char inChar = (char)Serial.read();
     // add it to the inputString:
     inputString += inChar;
