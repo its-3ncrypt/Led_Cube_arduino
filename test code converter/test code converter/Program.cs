@@ -4,7 +4,7 @@ namespace test_code_converter
 {
     class Program
     {
-        public int[,] test = new int[20, 512];
+        public int[,] test1 = new int[20, 512];
         public int[,] converted = new int[20, 512];
         void Main(string[] args)
         {
@@ -17,28 +17,19 @@ namespace test_code_converter
                 {
                     if (y % 2 != 0)
                     {
-                        test[i, y] = 1;
+                        test1[i, y] = 1;
                     }
                     else
                     {
-                        test[i, y] = 0;
+                        test1[i, y] = 0;
                     }
                 }
             }
-            Console.WriteLine(Printout(test));
+            Console.WriteLine(Printout(test1));
             Console.ReadLine();
         }
-         void ConverterFor20()
-        {
-            for (int n = 0; n < 20; n++)
-            {
-                for (int p = 0; p < 512; p++)
-                {
-                    converted[n,p] = ConverterToArduinoCode(test, n);
-                }
-            }
-        }
-        private int[] ConverterToArduinoCode(int[,] tested, int choise)
+
+        private string ConverterToArduinoCode(int[,] tested)
         {
             //temp split variables
             int[] fixeda = new int[512];
@@ -115,7 +106,7 @@ namespace test_code_converter
             //splitting tweedimensionale int
             for (int y = 0; y < 512; y++)
             {
-                The512[y] = tested[choise, y];
+                The512[y] = tested[1, y];
             }
 
             //Xed Codes maken (Y as van code verzetten in X as voor arduino)
@@ -771,13 +762,75 @@ namespace test_code_converter
             }
             countsamen++;
 
-            return fixeda;
+            int[] test01 = new int[512];
+            int[] test2 = new int[512];
+            int[] test3 = new int[512];
+            int[] test4 = new int[512];
+            int[] test5 = new int[512];
+            int[] test6 = new int[512];
+            int[] test7 = new int[512];
+            int[] test8 = new int[512];
+            int[] test9 = new int[512];
+            int[] test10 = new int[512];
+            int[] test11 = new int[512];
+            int[] test12 = new int[512];
+            int[] test13 = new int[512];
+            int[] test14 = new int[512];
+            int[] test15 = new int[512];
+            int[] test16 = new int[512];
+            int[] test17 = new int[512];
+            int[] test18 = new int[512];
+            int[] test19 = new int[512];
+            int[] test20 = new int[512];
+            string testString1;
+            string testString2;
+            string testString3;
+            string testString4;
+            string testString5;
+            string testString6;
+            string testString7;
+            string testString8;
+            string testString9;
+            string testString10;
+            string testString11;
+            string testString12;
+            string testString13;
+            string testString14;
+            string testString15;
+            string testString16;
+            string testString17;
+            string testString18;
+            string testString19;
+            string testString20;
+
+            testString1 = String.Join("", test01);
+            testString2 = String.Join("", test2);
+            testString3 = String.Join("", test3);
+            testString4 = String.Join("", test4);
+            testString5 = String.Join("", test5);
+            testString6 = String.Join("", test6);
+            testString7 = String.Join("", test7);
+            testString8 = String.Join("", test8);
+            testString9 = String.Join("", test9);
+            testString10 = String.Join("", test10);
+            testString11 = String.Join("", test11);
+            testString12 = String.Join("", test12);
+            testString13 = String.Join("", test13);
+            testString14 = String.Join("", test14);
+            testString15 = String.Join("", test15);
+            testString16 = String.Join("", test16);
+            testString17 = String.Join("", test17);
+            testString18 = String.Join("", test18);
+            testString19 = String.Join("", test19);
+            testString20 = String.Join("", test20);
+
+            return (testString1 + testString2 + testString3 + testString4 + testString5 + testString6 + testString7 + testString8 + testString9 + testString10 + testString11 + testString12 + testString13 + testString14 + testString15 + testString16 + testString17 + testString18 + testString19 + testString20);
 
         }
         //resultaten uitprinten
         private static string Printout(int[,] tested)
         {
-            int[] test1 = new int[512];
+            int[] test01 = new int[512];
             int[] test2 = new int[512];
             int[] test3 = new int[512];
             int[] test4 = new int[512];
@@ -824,7 +877,7 @@ namespace test_code_converter
                     switch (i)
                     {
                         case 0:
-                            test1[y] = tested[i, y];
+                            test01[y] = tested[i, y];
                             break;
                         case 1:
                             test2[y] = tested[i, y];
@@ -886,7 +939,7 @@ namespace test_code_converter
                     }
                 }
             }
-            testString1 = String.Join("", test1);
+            testString1 = String.Join("", test01);
             testString2 = String.Join("", test2);
             testString3 = String.Join("", test3);
             testString4 = String.Join("", test4);
