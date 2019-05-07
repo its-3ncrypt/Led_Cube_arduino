@@ -3,18 +3,19 @@
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX7219
 int maxInUse = 8; // No. of MAX72xx ICs
 byte hoeveel[8];
-//String Thecode = "10110111";
 String inputString = "";
 String usingString = "000010111111110000111010111001011100011000101110001110001110111110001000000110101111101010010101100000001010101000110000111101100100000100111011000111010100001010010100101101111100101101100000100111101010100";
 int amountofframes;
-
+bool stringComplete = false;  // whether the string is complete
+int county = 0;
 
 //**********************************************************************************************************************************************************  
 void setup()
 {
 	pinMode(SPI_CS, OUTPUT);
-
+	Serial.begin(9600);
 	SPI.begin(); //setup SPI Interface
+	inputString.reserve(500);//500 bytes reserveren
 
 	// Initialize MAX7219 IC
 	maxTransferAll(0x0F, 0x00);   // 00 - Turn off Test mode
@@ -36,33 +37,10 @@ void setup()
 //**********************************************************************************************************************************************************  
 void loop()
 {
-	/*
-	hoeveel[0] = Code_To_Hexadecimal(Thecode);
-	hoeveel[1] = Code_To_Hexadecimal(Thecode);
-	hoeveel[2] = Code_To_Hexadecimal(Thecode);
-	hoeveel[3] = Code_To_Hexadecimal(Thecode);
-	hoeveel[4] = Code_To_Hexadecimal(Thecode);
-	hoeveel[5] = Code_To_Hexadecimal(Thecode);
-	hoeveel[6] = Code_To_Hexadecimal(Thecode);
-	hoeveel[7] = Code_To_Hexadecimal(Thecode);
-	
-	for (int i = 0; i <= 8; i++)
-	{
-		maxTransferBall(i);
-	}
-	*/
-
-	//maxTransferBall(8);
-
+	RenewData();
+	FrameCalc(usingString);
 	DisplayToCube(usingString);
-
 	delay(1000);
-	/*
-	for (int y = 1; y < maxInUse + 1; y++) {
-		maxTransferAll(y, 0x00);
-	}
-	delay(500);
-	*/
 }
 
 //*******************************************************************************************************************************
@@ -1147,16 +1125,45 @@ void maxTransferBall(uint8_t address)
 }
 //********************************************************************************************************************************************************** 
 
+void serialEvent() 
+{
+	while (Serial.available()) 
+	{
+		// get the new byte:
+		char inChar = (char)Serial.read();
+		// add it to the inputString:
+		inputString += inChar;
+		// if the incoming character is a newline, set a flag so the main loop can
+		// do something about it:
+		if (inChar == '\n') {
+			stringComplete = true;
+		}
+	}
+}
+
+//********************************************************************************************************************************************************** 
+void RenewData() 
+{
+	if (stringComplete == true) 
+	{
+		usingString = inputString;
+		stringComplete = false;
+	}
+}
+
+//********************************************************************************************************************************************************** 
+
+
 void FrameCalc(String coded)
 {
 	int dabeer;
 	dabeer = coded.length();
-	amountofframes = dabeer / 512;
+	amountofframes = (dabeer / 512) - 1;
 }
 
 
 
-//**********************************************************************************************************************************************************  
+//********************************************************************************************************************************************************** 8=D
 void maxTransferAll(uint8_t address, uint8_t value)
 {
 	digitalWrite(SPI_CS, LOW);
@@ -1236,7 +1243,6 @@ void DisplayToCube(String inputcode)
 	String subPart62 = "";
 	String subPart63 = "";
 	String subPart64 = "";
-	int county = 0;
 	do
 	{
 		//subdelen maken
