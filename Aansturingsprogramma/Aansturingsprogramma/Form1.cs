@@ -28,10 +28,7 @@ namespace Aansturingsprogramma
         bool Ledraster7 = false;
         bool IsFrozen = false;
         int[,] ledGen = new int[20,512];
-        int EffectNumber = 0;
         int Snelheid = 2;
-        int Para1 = 0;
-        int Para2 = 0;
         int Slide = 1;
         int Frame = 0;
         bool ThereArePorts = false;
@@ -91,12 +88,9 @@ namespace Aansturingsprogramma
             checkBox3.Enabled = false;
             checkBox4.Enabled = false;
             checkBox5.Enabled = false;
-            checkBox7.Enabled = false;
             checkBox6.Enabled = false;
-            checkBox8.Enabled = false;
             checkBox9.Enabled = false;
             checkBox10.Enabled = false;
-            checkBox11.Enabled = false;
             checkBox13.Enabled = false;
             checkBox14.Enabled = false;
             checkBox15.Enabled = false;
@@ -105,8 +99,6 @@ namespace Aansturingsprogramma
             checkBox18.Enabled = false;
             checkBox19.Enabled = false;
             checkBox20.Enabled = false;
-            checkBox21.Enabled = false;
-            checkBox22.Enabled = false;
             checkBox23.Enabled = false;
             checkBox24.Enabled = false;
             checkBox25.Enabled = false;
@@ -115,8 +107,6 @@ namespace Aansturingsprogramma
             checkBox28.Enabled = false;
             checkBox29.Enabled = false;
             checkBox30.Enabled = false;
-            checkBox31.Enabled = false;
-            checkBox32.Enabled = false;
             checkBox33.Enabled = false;
             checkBox34.Enabled = false;
             checkBox35.Enabled = false;
@@ -156,14 +146,9 @@ namespace Aansturingsprogramma
             checkBox97.Enabled = false;
             checkBox98.Enabled = false;
             checkBox99.Enabled = false;
-            checkBox12.Enabled = false;
-            checkBox8.Enabled = false;
             numericUpDown1.Enabled = false;
-            numericUpDown2.Enabled = false;
-            numericUpDown3.Enabled = false;
             numericUpDown4.Enabled = false;
             numericUpDown5.Enabled = false;
-            button1.Enabled = false;
             button2.Enabled = false;
             checkBox100.Enabled = false;
         }
@@ -177,11 +162,8 @@ namespace Aansturingsprogramma
             checkBox4.Enabled = true;
             checkBox5.Enabled = true;
             checkBox6.Enabled = true;
-            checkBox8.Enabled = true;
             checkBox9.Enabled = true;
             checkBox10.Enabled = true;
-            checkBox12.Enabled = true;
-            checkBox11.Enabled = true;
             checkBox13.Enabled = true;
             checkBox14.Enabled = true;
             checkBox15.Enabled = true;
@@ -190,8 +172,6 @@ namespace Aansturingsprogramma
             checkBox18.Enabled = true;
             checkBox19.Enabled = true;
             checkBox20.Enabled = true;
-            checkBox21.Enabled = true;
-            checkBox22.Enabled = true;
             checkBox23.Enabled = true;
             checkBox24.Enabled = true;
             checkBox25.Enabled = true;
@@ -200,8 +180,6 @@ namespace Aansturingsprogramma
             checkBox28.Enabled = true;
             checkBox29.Enabled = true;
             checkBox30.Enabled = true;
-            checkBox31.Enabled = true;
-            checkBox32.Enabled = true;
             checkBox33.Enabled = true;
             checkBox34.Enabled = true;
             checkBox35.Enabled = true;
@@ -242,13 +220,9 @@ namespace Aansturingsprogramma
             checkBox98.Enabled = true;
             checkBox99.Enabled = true;
             numericUpDown1.Enabled = true;
-            numericUpDown2.Enabled = true;
-            numericUpDown3.Enabled = true;
             numericUpDown4.Enabled = true;
             numericUpDown5.Enabled = true;
-            button1.Enabled = true;
             button2.Enabled = true;
-            checkBox7.Enabled = true;
             checkBox100.Enabled = true;
         }
 
@@ -291,337 +265,6 @@ namespace Aansturingsprogramma
         {
             //leeg laten
         }        
-        //effect 1
-        private void checkBox32_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox32.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //effect 2
-        private void checkBox31_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox31.Checked)
-            {
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //effect 3
-        private void checkBox22_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox22.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //effect 4
-        private void checkBox21_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox21.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //effect 5
-        private void checkBox12_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox12.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //Effect 6
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox11.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-        }
-        //Effect 7
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox8.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-                if (checkBox7.Checked)
-                {
-                    checkBox7.Checked = false;
-                }
-            }
-            set_Effect_Status();
-
-        }
-        //effect 8
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox7.Checked)
-            {
-                if (checkBox31.Checked)
-                {
-                    checkBox31.Checked = false;
-                }
-                if (checkBox22.Checked)
-                {
-                    checkBox22.Checked = false;
-                }
-                if (checkBox21.Checked)
-                {
-                    checkBox21.Checked = false;
-                }
-                if (checkBox12.Checked)
-                {
-                    checkBox12.Checked = false;
-                }
-                if (checkBox11.Checked)
-                {
-                    checkBox11.Checked = false;
-                }
-                if (checkBox8.Checked)
-                {
-                    checkBox8.Checked = false;
-                }
-                if (checkBox32.Checked)
-                {
-                    checkBox32.Checked = false;
-                }
-            }
-            set_Effect_Status();
-
-        }
-        //effect nummer genereren
-        private void set_Effect_Status()
-        {
-            if (checkBox7.Checked)
-            {
-                EffectNumber = 1;
-            }
-            if (checkBox31.Checked)
-            {
-                EffectNumber = 2;
-            }
-            if (checkBox22.Checked)
-            {
-                EffectNumber = 3;
-            }
-            if (checkBox21.Checked)
-            {
-                EffectNumber = 4;
-            }
-            if (checkBox12.Checked)
-            {
-                EffectNumber = 5;
-            }
-            if (checkBox11.Checked)
-            {
-                EffectNumber = 6;
-            }
-            if (checkBox8.Checked)
-            {
-                EffectNumber = 7;
-            }
-            if (checkBox32.Checked)
-            {
-                EffectNumber = 8;
-            }
-            else
-            {
-                EffectNumber = 0;
-            }
-
-        }
         //snelheid naam
         private void label2_Click(object sender, EventArgs e)
         {
@@ -632,16 +275,7 @@ namespace Aansturingsprogramma
         {
             Snelheid = Convert.ToInt32(numericUpDown1.Value);
         }
-        //effect parameter 1
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            Para1 = Convert.ToInt32(numericUpDown2.Value);
-        }
-        //effect parameter 2
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-            Para2 = Convert.ToInt32(numericUpDown3.Value);
-        }
+        
         //upload button effecten
         private void button1_Click(object sender, EventArgs e)
         {
@@ -788,18 +422,9 @@ namespace Aansturingsprogramma
         {
             if (isConnected)
             {
-                if(EffectNumber==0)
-                {
-                    port.Write(Convert.ToString(Snelheid));
-                    port.Write(Convert.ToString(EffectNumber));
-                    port.Write(Printout(ledGen));
-                    
-                }
-                else
-                {
-                    port.Write(Convert.ToString(Snelheid));
-                    port.Write(Convert.ToString(EffectNumber));
-                }
+
+                port.Write(Convert.ToString(Snelheid));
+                port.Write(Printout(ledGen));
                 port.Write("\n");
             }
         }
