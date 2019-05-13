@@ -8,6 +8,7 @@ String usingString = "0000101111111100001110101110010111000110001011100011100011
 int amountofframes;
 bool stringComplete = false;  // whether the string is complete
 int county = 0;
+int speedy = 2;
 
 //**********************************************************************************************************************************************************  
 void setup()
@@ -1146,7 +1147,8 @@ void RenewData()
 {
 	if (stringComplete == true) 
 	{
-		usingString = inputString;
+		usingString = inputString.substring(1);
+    speedy = (inputString.substring(0,1)).toInt();
 		stringComplete = false;
 	}
 }
@@ -1384,6 +1386,7 @@ void DisplayToCube(String inputcode)
 		maxTransferAll(6, Code_To_Hexadecimal(subPart58));
 		maxTransferAll(7, Code_To_Hexadecimal(subPart57));
 		county++;
+   delay(speedy*100);
 	} 
 	while (county < amountofframes);
 }
