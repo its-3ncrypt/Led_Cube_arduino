@@ -12,8 +12,6 @@ You may check out our instructables for more detail at http://www.instructables.
 #define AXIS_Z 3
 #define REFRESH_RATE 120
 
-#define SS 10 //fix voor genuino zero
-
 int CUBE_SIZE = 8;
 int SPI_CS = 10;// This SPI Chip Select pin controls the MAX72xx
 byte value[8];
