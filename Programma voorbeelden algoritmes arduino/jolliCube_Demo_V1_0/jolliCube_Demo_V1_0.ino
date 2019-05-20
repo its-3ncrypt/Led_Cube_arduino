@@ -1,7 +1,3 @@
-/*
-You may check out our instructables for more detail at http://www.instructables.com/id/JolliCube-an-8x8x8-LED-Cube-SPI/
-*/
-
 #include <SPI.h>
 #include <avr/interrupt.h>
 #include <string.h>
@@ -36,7 +32,7 @@ void setup()
   maxTransferAll(0x0C, 0x01);   // 01 = on 00 = Power saving mode or shutdown
   maxTransferAll(0x0A, 0x0F);   // Set Brightness Intensity
 
-  //setUpInterrupts();
+  setUpInterrupts();
 }
 
 
@@ -2539,8 +2535,8 @@ char font_data[128][8] = {
  
  
 // Define display string here
-const int charNum = 17;
-char string[charNum] = {'P','R','O',' ','S','E','B','A','S','I','A','A','N','!','!','!','!'};
+const int charNum = 18;
+char string[charNum] = {'P','R','O',' ','S','E','B','A','S','T','I','A','A','N','!','!','!','!'};
  
 //***********************************************************************************************************************
 void effect_text(int delayt, int First, int Last){
@@ -3481,7 +3477,7 @@ void maxTransferLEDCube(uint8_t address)
 
 
 //***********************************************************************************************************************
-/*ISR(TIMER1_COMPA_vect)
+ISR(TIMER1_COMPA_vect)
 {
   display();
-}*/
+}
