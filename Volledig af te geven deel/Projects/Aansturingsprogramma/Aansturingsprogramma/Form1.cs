@@ -234,7 +234,6 @@ namespace Aansturingsprogramma
                 isConnected = true;
                 port = new SerialPort(selectedPort, 9600, Parity.None, 8, StopBits.One);
                 port.Open();
-                port.Write("#STAR\n");
                 button3.Text = "Disconnect";
                 enableControls();
             }
